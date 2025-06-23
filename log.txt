@@ -1,0 +1,783 @@
+&&&& RUNNING TensorRT.trtexec [TensorRT v100700] [b23] # trtexec --loadEngine=fused_model.engine --separateProfileRun --dumpProfile
+[06/15/2025-03:39:00] [I] === Model Options ===
+[06/15/2025-03:39:00] [I] Format: *
+[06/15/2025-03:39:00] [I] Model: 
+[06/15/2025-03:39:00] [I] Output:
+[06/15/2025-03:39:00] [I] 
+[06/15/2025-03:39:00] [I] === System Options ===
+[06/15/2025-03:39:00] [I] Device: 0
+[06/15/2025-03:39:00] [I] DLACore: 
+[06/15/2025-03:39:00] [I] Plugins:
+[06/15/2025-03:39:00] [I] setPluginsToSerialize:
+[06/15/2025-03:39:00] [I] dynamicPlugins:
+[06/15/2025-03:39:00] [I] ignoreParsedPluginLibs: 0
+[06/15/2025-03:39:00] [I] 
+[06/15/2025-03:39:00] [I] === Inference Options ===
+[06/15/2025-03:39:00] [I] Batch: Explicit
+[06/15/2025-03:39:00] [I] Input inference shapes: model
+[06/15/2025-03:39:00] [I] Iterations: 10
+[06/15/2025-03:39:00] [I] Duration: 3s (+ 200ms warm up)
+[06/15/2025-03:39:00] [I] Sleep time: 0ms
+[06/15/2025-03:39:00] [I] Idle time: 0ms
+[06/15/2025-03:39:00] [I] Inference Streams: 1
+[06/15/2025-03:39:00] [I] ExposeDMA: Disabled
+[06/15/2025-03:39:00] [I] Data transfers: Enabled
+[06/15/2025-03:39:00] [I] Spin-wait: Disabled
+[06/15/2025-03:39:00] [I] Multithreading: Disabled
+[06/15/2025-03:39:00] [I] CUDA Graph: Disabled
+[06/15/2025-03:39:00] [I] Separate profiling: Enabled
+[06/15/2025-03:39:00] [I] Time Deserialize: Disabled
+[06/15/2025-03:39:00] [I] Time Refit: Disabled
+[06/15/2025-03:39:00] [I] NVTX verbosity: 0
+[06/15/2025-03:39:00] [I] Persistent Cache Ratio: 0
+[06/15/2025-03:39:00] [I] Optimization Profile Index: 0
+[06/15/2025-03:39:00] [I] Weight Streaming Budget: 100.000000%
+[06/15/2025-03:39:00] [I] Inputs:
+[06/15/2025-03:39:00] [I] Debug Tensor Save Destinations:
+[06/15/2025-03:39:00] [I] === Reporting Options ===
+[06/15/2025-03:39:00] [I] Verbose: Disabled
+[06/15/2025-03:39:00] [I] Averages: 10 inferences
+[06/15/2025-03:39:00] [I] Percentiles: 90,95,99
+[06/15/2025-03:39:00] [I] Dump refittable layers:Disabled
+[06/15/2025-03:39:00] [I] Dump output: Disabled
+[06/15/2025-03:39:00] [I] Profile: Enabled
+[06/15/2025-03:39:00] [I] Export timing to JSON file: 
+[06/15/2025-03:39:00] [I] Export output to JSON file: 
+[06/15/2025-03:39:00] [I] Export profile to JSON file: 
+[06/15/2025-03:39:00] [I] 
+[06/15/2025-03:39:00] [I] === Device Information ===
+[06/15/2025-03:39:00] [I] Available Devices: 
+[06/15/2025-03:39:00] [I]   Device 0: "NVIDIA GeForce RTX 2080 Ti" UUID: GPU-57bd4538-09c5-4541-5723-9bcc2b84cefd
+[06/15/2025-03:39:00] [I]   Device 1: "NVIDIA GeForce RTX 2080 Ti" UUID: GPU-71d5048b-c4f5-310a-871b-1359e412e907
+[06/15/2025-03:39:00] [I]   Device 2: "NVIDIA GeForce RTX 2080 Ti" UUID: GPU-1ff6c3db-ab69-9d3f-6532-423920d9b2f5
+[06/15/2025-03:39:00] [I]   Device 3: "NVIDIA GeForce RTX 2080 Ti" UUID: GPU-331925bc-b43e-c5e7-d01d-c9214c9ab15f
+[06/15/2025-03:39:00] [I]   Device 4: "NVIDIA GeForce RTX 2080 Ti" UUID: GPU-0fce9fc1-0ceb-33cf-264a-fee885083317
+[06/15/2025-03:39:00] [I]   Device 5: "NVIDIA GeForce RTX 2080 Ti" UUID: GPU-898dea28-ec1d-5b8a-c5a4-24e91e8e4f2a
+[06/15/2025-03:39:00] [I]   Device 6: "NVIDIA GeForce RTX 2080 Ti" UUID: GPU-cecde752-763a-016f-93a0-cb1a0d155f6e
+[06/15/2025-03:39:00] [I]   Device 7: "NVIDIA GeForce RTX 2080 Ti" UUID: GPU-bf86f848-f394-c954-8936-981f65acaa25
+[06/15/2025-03:39:00] [I] Selected Device: NVIDIA GeForce RTX 2080 Ti
+[06/15/2025-03:39:00] [I] Selected Device ID: 0
+[06/15/2025-03:39:00] [I] Selected Device UUID: GPU-57bd4538-09c5-4541-5723-9bcc2b84cefd
+[06/15/2025-03:39:00] [I] Compute Capability: 7.5
+[06/15/2025-03:39:00] [I] SMs: 68
+[06/15/2025-03:39:00] [I] Device Global Memory: 11004 MiB
+[06/15/2025-03:39:00] [I] Shared Memory per SM: 64 KiB
+[06/15/2025-03:39:00] [I] Memory Bus Width: 352 bits (ECC disabled)
+[06/15/2025-03:39:00] [I] Application Compute Clock Rate: 1.545 GHz
+[06/15/2025-03:39:00] [I] Application Memory Clock Rate: 7 GHz
+[06/15/2025-03:39:00] [I] 
+[06/15/2025-03:39:00] [I] Note: The application clock rates do not reflect the actual clock rates that the GPU is currently running at.
+[06/15/2025-03:39:00] [I] 
+[06/15/2025-03:39:00] [I] TensorRT version: 10.7.0
+[06/15/2025-03:39:00] [I] Loading standard plugins
+[06/15/2025-03:39:00] [I] [TRT] Loaded engine size: 80 MiB
+[06/15/2025-03:39:00] [I] Engine deserialized in 0.186409 sec.
+[06/15/2025-03:39:00] [I] [TRT] [MS] Running engine with multi stream info
+[06/15/2025-03:39:00] [I] [TRT] [MS] Number of aux streams is 5
+[06/15/2025-03:39:00] [I] [TRT] [MS] Number of total worker streams is 6
+[06/15/2025-03:39:00] [I] [TRT] [MS] The main stream provided by execute/enqueue calls is the first worker stream
+[06/15/2025-03:39:00] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +71, now: CPU 1, GPU 149 (MiB)
+[06/15/2025-03:39:00] [I] Setting persistentCacheLimit to 0 bytes.
+[06/15/2025-03:39:00] [I] Created execution context with device memory size: 65.8179 MiB
+[06/15/2025-03:39:00] [I] Using random values for input images
+[06/15/2025-03:39:00] [I] Input binding for images with dimensions 1x3x640x640 is created.
+[06/15/2025-03:39:00] [I] Using random values for input orig_target_sizes
+[06/15/2025-03:39:00] [I] Input binding for orig_target_sizes with dimensions 1x2 is created.
+[06/15/2025-03:39:00] [I] Output binding for fused_labels with dimensions 1x600 is created.
+[06/15/2025-03:39:00] [I] Output binding for fused_boxes with dimensions 1x600x4 is created.
+[06/15/2025-03:39:00] [I] Output binding for fused_scores with dimensions 1x600 is created.
+[06/15/2025-03:39:00] [I] Starting inference
+[06/15/2025-03:39:03] [I] Warmup completed 8 queries over 200 ms
+[06/15/2025-03:39:03] [I] Timing trace has 308 queries over 3.02381 s
+[06/15/2025-03:39:03] [I] 
+[06/15/2025-03:39:03] [I] === Trace details ===
+[06/15/2025-03:39:03] [I] Trace averages of 10 runs:
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 13.4134 ms - Host latency: 14.1313 ms (enqueue 6.37628 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 9.43258 ms - Host latency: 10.3116 ms (enqueue 8.02025 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 9.88736 ms - Host latency: 10.5834 ms (enqueue 6.3733 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 12.2628 ms - Host latency: 13.0131 ms (enqueue 6.27059 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.38303 ms - Host latency: 9.02207 ms (enqueue 5.52115 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.84731 ms - Host latency: 9.65537 ms (enqueue 5.97751 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.0939 ms - Host latency: 8.74487 ms (enqueue 4.59519 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.0871 ms - Host latency: 8.69058 ms (enqueue 6.04601 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 9.17981 ms - Host latency: 10.1167 ms (enqueue 6.13207 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.18289 ms - Host latency: 8.77614 ms (enqueue 6.04799 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.64095 ms - Host latency: 9.23646 ms (enqueue 5.81556 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 12.0119 ms - Host latency: 12.92 ms (enqueue 5.69191 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 16.3262 ms - Host latency: 17.2253 ms (enqueue 6.90928 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 9.41902 ms - Host latency: 10.269 ms (enqueue 5.93351 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.89713 ms - Host latency: 9.48822 ms (enqueue 6.48472 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 10.6979 ms - Host latency: 11.4824 ms (enqueue 6.74875 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 9.03528 ms - Host latency: 9.7675 ms (enqueue 6.23862 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 7.64935 ms - Host latency: 8.28997 ms (enqueue 6.5348 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 9.57147 ms - Host latency: 10.6637 ms (enqueue 6.75614 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 7.97751 ms - Host latency: 8.5906 ms (enqueue 6.64385 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.3542 ms - Host latency: 8.99294 ms (enqueue 6.46753 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 9.01729 ms - Host latency: 9.94238 ms (enqueue 7.21614 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.13757 ms - Host latency: 8.7323 ms (enqueue 6.59336 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.10466 ms - Host latency: 8.71699 ms (enqueue 5.39722 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 9.27363 ms - Host latency: 10.7307 ms (enqueue 4.88665 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.26604 ms - Host latency: 8.90757 ms (enqueue 4.67263 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 12.1448 ms - Host latency: 12.7746 ms (enqueue 4.54089 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 14.2379 ms - Host latency: 14.9551 ms (enqueue 5.95066 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 8.50496 ms - Host latency: 9.11238 ms (enqueue 6.00088 ms)
+[06/15/2025-03:39:03] [I] Average on 10 runs - GPU latency: 12.0385 ms - Host latency: 12.8336 ms (enqueue 8.13735 ms)
+[06/15/2025-03:39:03] [I] 
+[06/15/2025-03:39:03] [I] === Performance summary ===
+[06/15/2025-03:39:03] [I] Throughput: 101.858 qps
+[06/15/2025-03:39:03] [I] Latency: min = 6.92627 ms, max = 21.2207 ms, mean = 10.526 ms, median = 9.27423 ms, percentile(90%) = 16.6846 ms, percentile(95%) = 18.0132 ms, percentile(99%) = 19.077 ms
+[06/15/2025-03:39:03] [I] Enqueue Time: min = 3.36841 ms, max = 21.9868 ms, mean = 6.27501 ms, median = 5.93542 ms, percentile(90%) = 7.62488 ms, percentile(95%) = 9.65454 ms, percentile(99%) = 17.6255 ms
+[06/15/2025-03:39:03] [I] H2D Latency: min = 0.420166 ms, max = 5.37817 ms, mean = 0.72881 ms, median = 0.608002 ms, percentile(90%) = 0.905518 ms, percentile(95%) = 1.24976 ms, percentile(99%) = 2.11853 ms
+[06/15/2025-03:39:03] [I] GPU Compute Time: min = 6.46753 ms, max = 20.5864 ms, mean = 9.77793 ms, median = 8.52058 ms, percentile(90%) = 15.9824 ms, percentile(95%) = 17.2195 ms, percentile(99%) = 17.6499 ms
+[06/15/2025-03:39:03] [I] D2H Latency: min = 0.00732422 ms, max = 0.0469971 ms, mean = 0.0192942 ms, median = 0.017807 ms, percentile(90%) = 0.0269775 ms, percentile(95%) = 0.0300293 ms, percentile(99%) = 0.0412598 ms
+[06/15/2025-03:39:03] [I] Total Host Walltime: 3.02381 s
+[06/15/2025-03:39:03] [I] Total GPU Compute Time: 3.0116 s
+[06/15/2025-03:39:03] [I] Explanations of the performance metrics are printed in the verbose logs.
+[06/15/2025-03:39:03] [I] 
+[06/15/2025-03:39:07] [I] 
+[06/15/2025-03:39:07] [I] === Profile (243 iterations ) ===
+[06/15/2025-03:39:07] [I]    Time(ms)     Avg.(ms)   Median(ms)   Time(%)   Layer
+[06/15/2025-03:39:07] [I]        4.98       0.0205       0.0205       0.2   Reformatting CopyNode for Input Tensor 0 to model2_/model/backbone/stem/stem1/conv/Conv + model2_/model/backbone/stem/stem1/act/Relu || model1_/model/backbone/stem/stem1/conv/Conv + model1_/model/backbone/stem/stem1/act/Relu
+[06/15/2025-03:39:07] [I]       10.87       0.0447       0.0448       0.3   model2_/model/backbone/stem/stem1/conv/Conv + model2_/model/backbone/stem/stem1/act/Relu || model1_/model/backbone/stem/stem1/conv/Conv + model1_/model/backbone/stem/stem1/act/Relu
+[06/15/2025-03:39:07] [I]        5.38       0.0221       0.0221       0.2   model2_model.backbone.stem.stem1.lab.scale + ONNXTRT_Broadcast_1472 + model2_/model/backbone/stem/stem1/lab/Mul + model2_model.backbone.stem.stem1.lab.bias + ONNXTRT_Broadcast_1474 + model2_/model/backbone/stem/stem1/lab/Add
+[06/15/2025-03:39:07] [I]        5.55       0.0229       0.0225       0.2   model2_/model/backbone/stem/Pad
+[06/15/2025-03:39:07] [I]       10.24       0.0421       0.0419       0.3   model2_/model/backbone/stem/stem2a/conv/Conv + model2_/model/backbone/stem/stem2a/act/Relu + model2_model.backbone.stem.stem2a.lab.scale + ONNXTRT_Broadcast_1477 + model2_/model/backbone/stem/stem2a/lab/Mul + model2_model.backbone.stem.stem2a.lab.bias + ONNXTRT_Broadcast_1479 + model2_/model/backbone/stem/stem2a/lab/Add
+[06/15/2025-03:39:07] [I]        7.35       0.0302       0.0302       0.2   model2_/model/backbone/stem/stem2b/conv/Conv + model2_/model/backbone/stem/stem2b/act/Relu + model2_model.backbone.stem.stem2b.lab.scale + ONNXTRT_Broadcast_1481 + model2_/model/backbone/stem/stem2b/lab/Mul + model2_model.backbone.stem.stem2b.lab.bias + ONNXTRT_Broadcast_1483 + model2_/model/backbone/stem/stem2b/lab/Add
+[06/15/2025-03:39:07] [I]        6.29       0.0259       0.0256       0.2   model2_/model/backbone/stem/pool/MaxPool
+[06/15/2025-03:39:07] [I]        5.50       0.0227       0.0225       0.2   model2_/model/backbone/stem/pool/MaxPool_output_0 copy
+[06/15/2025-03:39:07] [I]       10.65       0.0438       0.0434       0.3   model2_/model/backbone/stem/stem3/conv/Conv + model2_/model/backbone/stem/stem3/act/Relu + model2_model.backbone.stem.stem3.lab.scale + ONNXTRT_Broadcast_1485 + model2_/model/backbone/stem/stem3/lab/Mul + model2_model.backbone.stem.stem3.lab.bias + ONNXTRT_Broadcast_1487 + model2_/model/backbone/stem/stem3/lab/Add
+[06/15/2025-03:39:07] [I]        2.75       0.0113       0.0109       0.1   model2_/model/backbone/stem/stem4/conv/Conv + model2_/model/backbone/stem/stem4/act/Relu + model2_model.backbone.stem.stem4.lab.scale + ONNXTRT_Broadcast_1489 + model2_/model/backbone/stem/stem4/lab/Mul + model2_model.backbone.stem.stem4.lab.bias + ONNXTRT_Broadcast_1491 + model2_/model/backbone/stem/stem4/lab/Add
+[06/15/2025-03:39:07] [I]        1.53       0.0063       0.0061       0.0   Reformatting CopyNode for Input Tensor 0 to model2_/model/backbone/stages.0/blocks/blocks.0/layers.0/conv/Conv + model2_/model/backbone/stages.0/blocks/blocks.0/layers.0/act/Relu + model2_model.backbone.stages.0.blocks.0.layers.0.lab.scale + ONNXTRT_Broadcast_1493 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.0/lab/Mul + model2_model.backbone.stages.0.blocks.0.layers.0.lab.bias + ONNXTRT_Broadcast_1495 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.0/lab/Add
+[06/15/2025-03:39:07] [I]        4.60       0.0189       0.0184       0.1   model2_/model/backbone/stages.0/blocks/blocks.0/layers.0/conv/Conv + model2_/model/backbone/stages.0/blocks/blocks.0/layers.0/act/Relu + model2_model.backbone.stages.0.blocks.0.layers.0.lab.scale + ONNXTRT_Broadcast_1493 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.0/lab/Mul + model2_model.backbone.stages.0.blocks.0.layers.0.lab.bias + ONNXTRT_Broadcast_1495 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.0/lab/Add
+[06/15/2025-03:39:07] [I]        4.54       0.0187       0.0184       0.1   model2_/model/backbone/stages.0/blocks/blocks.0/layers.1/conv/Conv + model2_/model/backbone/stages.0/blocks/blocks.0/layers.1/act/Relu + model2_model.backbone.stages.0.blocks.0.layers.1.lab.scale + ONNXTRT_Broadcast_1497 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.1/lab/Mul + model2_model.backbone.stages.0.blocks.0.layers.1.lab.bias + ONNXTRT_Broadcast_1499 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.1/lab/Add
+[06/15/2025-03:39:07] [I]        4.56       0.0187       0.0184       0.1   model2_/model/backbone/stages.0/blocks/blocks.0/layers.2/conv/Conv + model2_/model/backbone/stages.0/blocks/blocks.0/layers.2/act/Relu + model2_model.backbone.stages.0.blocks.0.layers.2.lab.scale + ONNXTRT_Broadcast_1501 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.2/lab/Mul + model2_model.backbone.stages.0.blocks.0.layers.2.lab.bias + ONNXTRT_Broadcast_1503 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.2/lab/Add
+[06/15/2025-03:39:07] [I]        4.53       0.0186       0.0184       0.1   model2_/model/backbone/stages.0/blocks/blocks.0/layers.3/conv/Conv + model2_/model/backbone/stages.0/blocks/blocks.0/layers.3/act/Relu + model2_model.backbone.stages.0.blocks.0.layers.3.lab.scale + ONNXTRT_Broadcast_1505 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.3/lab/Mul + model2_model.backbone.stages.0.blocks.0.layers.3.lab.bias + ONNXTRT_Broadcast_1507 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.3/lab/Add
+[06/15/2025-03:39:07] [I]        1.53       0.0063       0.0061       0.0   Reformatting CopyNode for Output Tensor 0 to model2_/model/backbone/stages.0/blocks/blocks.0/layers.3/conv/Conv + model2_/model/backbone/stages.0/blocks/blocks.0/layers.3/act/Relu + model2_model.backbone.stages.0.blocks.0.layers.3.lab.scale + ONNXTRT_Broadcast_1505 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.3/lab/Mul + model2_model.backbone.stages.0.blocks.0.layers.3.lab.bias + ONNXTRT_Broadcast_1507 + model2_/model/backbone/stages.0/blocks/blocks.0/layers.3/lab/Add
+[06/15/2025-03:39:07] [I]        2.52       0.0104       0.0102       0.1   model2_/model/backbone/stem/stem4/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        2.44       0.0100       0.0100       0.1   model2_/model/backbone/stages.0/blocks/blocks.0/layers.0/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        2.41       0.0099       0.0099       0.1   model2_/model/backbone/stages.0/blocks/blocks.0/layers.1/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        2.47       0.0102       0.0101       0.1   model2_/model/backbone/stages.0/blocks/blocks.0/layers.2/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        7.28       0.0299       0.0298       0.2   model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.0/conv/Conv + model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.0/act/Relu + model2_model.backbone.stages.0.blocks.0.aggregation.0.lab.scale + ONNXTRT_Broadcast_1509 + model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.0/lab/Mul + model2_model.backbone.stages.0.blocks.0.aggregation.0.lab.bias + ONNXTRT_Broadcast_1511 + model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]        2.30       0.0095       0.0094       0.1   Reformatting CopyNode for Input Tensor 0 to model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/conv/Conv + model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/act/Relu + model2_model.backbone.stages.0.blocks.0.aggregation.1.lab.scale + ONNXTRT_Broadcast_1513 + model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/lab/Mul + model2_model.backbone.stages.0.blocks.0.aggregation.1.lab.bias + ONNXTRT_Broadcast_1515 + model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/lab/Add
+[06/15/2025-03:39:07] [I]        5.40       0.0222       0.0222       0.2   model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/conv/Conv + model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/act/Relu + model2_model.backbone.stages.0.blocks.0.aggregation.1.lab.scale + ONNXTRT_Broadcast_1513 + model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/lab/Mul + model2_model.backbone.stages.0.blocks.0.aggregation.1.lab.bias + ONNXTRT_Broadcast_1515 + model2_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/lab/Add
+[06/15/2025-03:39:07] [I]        2.77       0.0114       0.0111       0.1   model2_/model/backbone/stages.1/downsample/conv/Conv
+[06/15/2025-03:39:07] [I]        5.77       0.0238       0.0237       0.2   model2_/model/backbone/stages.1/blocks/blocks.0/layers.0/conv/Conv + model2_/model/backbone/stages.1/blocks/blocks.0/layers.0/act/Relu + model2_model.backbone.stages.1.blocks.0.layers.0.lab.scale + ONNXTRT_Broadcast_1517 + model2_/model/backbone/stages.1/blocks/blocks.0/layers.0/lab/Mul + model2_model.backbone.stages.1.blocks.0.layers.0.lab.bias + ONNXTRT_Broadcast_1519 + model2_/model/backbone/stages.1/blocks/blocks.0/layers.0/lab/Add
+[06/15/2025-03:39:07] [I]        4.45       0.0183       0.0183       0.1   model2_/model/backbone/stages.1/blocks/blocks.0/layers.1/conv/Conv + model2_/model/backbone/stages.1/blocks/blocks.0/layers.1/act/Relu + model2_model.backbone.stages.1.blocks.0.layers.1.lab.scale + ONNXTRT_Broadcast_1521 + model2_/model/backbone/stages.1/blocks/blocks.0/layers.1/lab/Mul + model2_model.backbone.stages.1.blocks.0.layers.1.lab.bias + ONNXTRT_Broadcast_1523 + model2_/model/backbone/stages.1/blocks/blocks.0/layers.1/lab/Add
+[06/15/2025-03:39:07] [I]        4.37       0.0180       0.0180       0.1   model2_/model/backbone/stages.1/blocks/blocks.0/layers.2/conv/Conv + model2_/model/backbone/stages.1/blocks/blocks.0/layers.2/act/Relu + model2_model.backbone.stages.1.blocks.0.layers.2.lab.scale + ONNXTRT_Broadcast_1525 + model2_/model/backbone/stages.1/blocks/blocks.0/layers.2/lab/Mul + model2_model.backbone.stages.1.blocks.0.layers.2.lab.bias + ONNXTRT_Broadcast_1527 + model2_/model/backbone/stages.1/blocks/blocks.0/layers.2/lab/Add
+[06/15/2025-03:39:07] [I]        4.96       0.0204       0.0204       0.2   model2_/model/backbone/stages.1/blocks/blocks.0/layers.3/conv/Conv + model2_/model/backbone/stages.1/blocks/blocks.0/layers.3/act/Relu + model2_model.backbone.stages.1.blocks.0.layers.3.lab.scale + ONNXTRT_Broadcast_1529 + model2_/model/backbone/stages.1/blocks/blocks.0/layers.3/lab/Mul + model2_model.backbone.stages.1.blocks.0.layers.3.lab.bias + ONNXTRT_Broadcast_1531 + model2_/model/backbone/stages.1/blocks/blocks.0/layers.3/lab/Add
+[06/15/2025-03:39:07] [I]        2.02       0.0083       0.0081       0.1   model2_/model/backbone/stages.1/downsample/conv/Conv_output_0 copy
+[06/15/2025-03:39:07] [I]        2.50       0.0103       0.0093       0.1   model2_/model/backbone/stages.1/blocks/blocks.0/layers.0/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        2.26       0.0093       0.0090       0.1   model2_/model/backbone/stages.1/blocks/blocks.0/layers.1/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        2.28       0.0094       0.0092       0.1   model2_/model/backbone/stages.1/blocks/blocks.0/layers.2/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        7.20       0.0296       0.0291       0.2   model2_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.0/conv/Conv + model2_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.0/act/Relu + model2_model.backbone.stages.1.blocks.0.aggregation.0.lab.scale + ONNXTRT_Broadcast_1533 + model2_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.0/lab/Mul + model2_model.backbone.stages.1.blocks.0.aggregation.0.lab.bias + ONNXTRT_Broadcast_1535 + model2_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]        7.43       0.0306       0.0306       0.2   model2_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.1/conv/Conv + model2_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.1/act/Relu + model2_model.backbone.stages.1.blocks.0.aggregation.1.lab.scale + ONNXTRT_Broadcast_1537 + model2_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.1/lab/Mul + model2_model.backbone.stages.1.blocks.0.aggregation.1.lab.bias + ONNXTRT_Broadcast_1539 + model2_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.1/lab/Add
+[06/15/2025-03:39:07] [I]        2.82       0.0116       0.0116       0.1   model2_/model/backbone/stages.2/downsample/conv/Conv
+[06/15/2025-03:39:07] [I]        2.52       0.0104       0.0102       0.1   model2_/model/backbone/stages.2/blocks/blocks.0/layers.0/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.37       0.0098       0.0097       0.1   model2_/model/backbone/stages.2/blocks/blocks.0/layers.0/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.0/layers.0/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.26       0.0052       0.0052       0.0   model2_model.backbone.stages.2.blocks.0.layers.0.conv2.lab.scale + ONNXTRT_Broadcast_1541 + model2_/model/backbone/stages.2/blocks/blocks.0/layers.0/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.0.layers.0.conv2.lab.bias + ONNXTRT_Broadcast_1543 + model2_/model/backbone/stages.2/blocks/blocks.0/layers.0/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        1.91       0.0079       0.0079       0.1   model2_/model/backbone/stages.2/blocks/blocks.0/layers.1/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.34       0.0096       0.0096       0.1   model2_/model/backbone/stages.2/blocks/blocks.0/layers.1/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.0/layers.1/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.35       0.0056       0.0054       0.0   model2_model.backbone.stages.2.blocks.0.layers.1.conv2.lab.scale + ONNXTRT_Broadcast_1545 + model2_/model/backbone/stages.2/blocks/blocks.0/layers.1/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.0.layers.1.conv2.lab.bias + ONNXTRT_Broadcast_1547 + model2_/model/backbone/stages.2/blocks/blocks.0/layers.1/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.17       0.0089       0.0082       0.1   model2_/model/backbone/stages.2/blocks/blocks.0/layers.2/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.44       0.0100       0.0101       0.1   model2_/model/backbone/stages.2/blocks/blocks.0/layers.2/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.0/layers.2/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.33       0.0055       0.0053       0.0   model2_model.backbone.stages.2.blocks.0.layers.2.conv2.lab.scale + ONNXTRT_Broadcast_1549 + model2_/model/backbone/stages.2/blocks/blocks.0/layers.2/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.0.layers.2.conv2.lab.bias + ONNXTRT_Broadcast_1551 + model2_/model/backbone/stages.2/blocks/blocks.0/layers.2/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.24       0.0092       0.0080       0.1   model2_/model/backbone/stages.2/blocks/blocks.0/layers.3/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.37       0.0097       0.0096       0.1   model2_/model/backbone/stages.2/blocks/blocks.0/layers.3/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.0/layers.3/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.37       0.0057       0.0055       0.0   model2_model.backbone.stages.2.blocks.0.layers.3.conv2.lab.scale + ONNXTRT_Broadcast_1553 + model2_/model/backbone/stages.2/blocks/blocks.0/layers.3/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.0.layers.3.conv2.lab.bias + ONNXTRT_Broadcast_1555 + model2_/model/backbone/stages.2/blocks/blocks.0/layers.3/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        6.58       0.0271       0.0266       0.2   model2_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.0/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.0/act/Relu + model2_model.backbone.stages.2.blocks.0.aggregation.0.lab.scale + ONNXTRT_Broadcast_1557 + model2_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.0/lab/Mul + model2_model.backbone.stages.2.blocks.0.aggregation.0.lab.bias + ONNXTRT_Broadcast_1559 + model2_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]        6.24       0.0257       0.0250       0.2   model2_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.1/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.1/act/Relu + model2_model.backbone.stages.2.blocks.0.aggregation.1.lab.scale + ONNXTRT_Broadcast_1561 + model2_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.1/lab/Mul + model2_model.backbone.stages.2.blocks.0.aggregation.1.lab.bias + ONNXTRT_Broadcast_1563 + model2_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.1/lab/Add
+[06/15/2025-03:39:07] [I]        3.48       0.0143       0.0142       0.1   model2_/model/backbone/stages.2/blocks/blocks.1/layers.0/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.37       0.0097       0.0096       0.1   model2_/model/backbone/stages.2/blocks/blocks.1/layers.0/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.1/layers.0/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.25       0.0051       0.0047       0.0   model2_model.backbone.stages.2.blocks.1.layers.0.conv2.lab.scale + ONNXTRT_Broadcast_1565 + model2_/model/backbone/stages.2/blocks/blocks.1/layers.0/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.1.layers.0.conv2.lab.bias + ONNXTRT_Broadcast_1567 + model2_/model/backbone/stages.2/blocks/blocks.1/layers.0/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.78       0.0115       0.0078       0.1   model2_/model/backbone/stages.2/blocks/blocks.1/layers.1/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.61       0.0107       0.0096       0.1   model2_/model/backbone/stages.2/blocks/blocks.1/layers.1/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.1/layers.1/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.37       0.0056       0.0054       0.0   model2_model.backbone.stages.2.blocks.1.layers.1.conv2.lab.scale + ONNXTRT_Broadcast_1569 + model2_/model/backbone/stages.2/blocks/blocks.1/layers.1/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.1.layers.1.conv2.lab.bias + ONNXTRT_Broadcast_1571 + model2_/model/backbone/stages.2/blocks/blocks.1/layers.1/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.04       0.0084       0.0075       0.1   model2_/model/backbone/stages.2/blocks/blocks.1/layers.2/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.38       0.0098       0.0096       0.1   model2_/model/backbone/stages.2/blocks/blocks.1/layers.2/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.1/layers.2/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.36       0.0056       0.0054       0.0   model2_model.backbone.stages.2.blocks.1.layers.2.conv2.lab.scale + ONNXTRT_Broadcast_1573 + model2_/model/backbone/stages.2/blocks/blocks.1/layers.2/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.1.layers.2.conv2.lab.bias + ONNXTRT_Broadcast_1575 + model2_/model/backbone/stages.2/blocks/blocks.1/layers.2/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        1.92       0.0079       0.0076       0.1   model2_/model/backbone/stages.2/blocks/blocks.1/layers.3/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.60       0.0107       0.0100       0.1   model2_/model/backbone/stages.2/blocks/blocks.1/layers.3/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.1/layers.3/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.39       0.0057       0.0053       0.0   model2_model.backbone.stages.2.blocks.1.layers.3.conv2.lab.scale + ONNXTRT_Broadcast_1577 + model2_/model/backbone/stages.2/blocks/blocks.1/layers.3/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.1.layers.3.conv2.lab.bias + ONNXTRT_Broadcast_1579 + model2_/model/backbone/stages.2/blocks/blocks.1/layers.3/conv2/lab/Add
+[06/15/2025-03:39:07] [I]       10.88       0.0448       0.0368       0.3   model2_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.0/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.0/act/Relu + model2_model.backbone.stages.0.blocks.0.aggregation.0.lab.scale_clone_1 + ONNXTRT_Broadcast_1581 + model2_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.0/lab/Mul + model2_model.backbone.stages.2.blocks.1.aggregation.0.lab.bias + ONNXTRT_Broadcast_1583 + model2_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]        5.79       0.0238       0.0236       0.2   model2_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.1/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.1/act/Relu
+[06/15/2025-03:39:07] [I]        4.18       0.0172       0.0166       0.1   PWN(model2_model.backbone.stages.2.blocks.1.aggregation.1.lab.scale + ONNXTRT_Broadcast_1585 + model2_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.1/lab/Mul + model2_model.backbone.stages.2.blocks.1.aggregation.1.lab.bias + ONNXTRT_Broadcast_1587 + model2_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.1/lab/Add, PWN(model2_/model/backbone/stages.2/blocks/blocks.1/Add))
+[06/15/2025-03:39:07] [I]        3.73       0.0153       0.0147       0.1   model2_/model/backbone/stages.2/blocks/blocks.2/layers.0/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.56       0.0105       0.0102       0.1   model2_/model/backbone/stages.2/blocks/blocks.2/layers.0/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.2/layers.0/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.27       0.0052       0.0048       0.0   model2_model.backbone.stages.2.blocks.2.layers.0.conv2.lab.scale + ONNXTRT_Broadcast_1589 + model2_/model/backbone/stages.2/blocks/blocks.2/layers.0/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.2.layers.0.conv2.lab.bias + ONNXTRT_Broadcast_1591 + model2_/model/backbone/stages.2/blocks/blocks.2/layers.0/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        1.90       0.0078       0.0076       0.1   model2_/model/backbone/stages.2/blocks/blocks.2/layers.1/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.77       0.0114       0.0100       0.1   model2_/model/backbone/stages.2/blocks/blocks.2/layers.1/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.2/layers.1/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.39       0.0057       0.0054       0.0   model2_model.backbone.stages.2.blocks.2.layers.1.conv2.lab.scale + ONNXTRT_Broadcast_1593 + model2_/model/backbone/stages.2/blocks/blocks.2/layers.1/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.2.layers.1.conv2.lab.bias + ONNXTRT_Broadcast_1595 + model2_/model/backbone/stages.2/blocks/blocks.2/layers.1/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        1.94       0.0080       0.0077       0.1   model2_/model/backbone/stages.2/blocks/blocks.2/layers.2/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.56       0.0105       0.0097       0.1   model2_/model/backbone/stages.2/blocks/blocks.2/layers.2/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.2/layers.2/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.54       0.0063       0.0053       0.0   model2_model.backbone.stages.2.blocks.2.layers.2.conv2.lab.scale + ONNXTRT_Broadcast_1597 + model2_/model/backbone/stages.2/blocks/blocks.2/layers.2/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.2.layers.2.conv2.lab.bias + ONNXTRT_Broadcast_1599 + model2_/model/backbone/stages.2/blocks/blocks.2/layers.2/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        1.96       0.0081       0.0079       0.1   model2_/model/backbone/stages.2/blocks/blocks.2/layers.3/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        3.01       0.0124       0.0095       0.1   model2_/model/backbone/stages.2/blocks/blocks.2/layers.3/conv2/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.2/layers.3/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.29       0.0053       0.0046       0.0   model2_model.backbone.stages.2.blocks.2.layers.3.conv2.lab.scale + ONNXTRT_Broadcast_1601 + model2_/model/backbone/stages.2/blocks/blocks.2/layers.3/conv2/lab/Mul + model2_model.backbone.stages.2.blocks.2.layers.3.conv2.lab.bias + ONNXTRT_Broadcast_1603 + model2_/model/backbone/stages.2/blocks/blocks.2/layers.3/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        9.49       0.0391       0.0363       0.3   model2_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.0/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.0/act/Relu + model2_model.backbone.stages.2.blocks.2.aggregation.0.lab.scale + ONNXTRT_Broadcast_1605 + model2_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.0/lab/Mul + model2_model.backbone.stages.2.blocks.2.aggregation.0.lab.bias + ONNXTRT_Broadcast_1607 + model2_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]        5.86       0.0241       0.0239       0.2   model2_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.1/conv/Conv + model2_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.1/act/Relu
+[06/15/2025-03:39:07] [I]        4.23       0.0174       0.0168       0.1   PWN(model2_model.backbone.stages.2.blocks.2.aggregation.1.lab.scale + ONNXTRT_Broadcast_1609 + model2_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.1/lab/Mul + model2_model.backbone.stages.2.blocks.2.aggregation.1.lab.bias + ONNXTRT_Broadcast_1611 + model2_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.1/lab/Add, PWN(model2_/model/backbone/stages.2/blocks/blocks.2/Add))
+[06/15/2025-03:39:07] [I]        2.09       0.0086       0.0082       0.1   model2_/model/backbone/stages.3/downsample/conv/Conv
+[06/15/2025-03:39:07] [I]        3.00       0.0123       0.0121       0.1   model2_/model/backbone/stages.3/blocks/blocks.0/layers.0/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.15       0.0089       0.0082       0.1   model2_/model/backbone/stages.3/blocks/blocks.0/layers.0/conv2/conv/Conv + model2_/model/backbone/stages.3/blocks/blocks.0/layers.0/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.27       0.0052       0.0046       0.0   model2_model.backbone.stages.3.blocks.0.layers.0.conv2.lab.scale + ONNXTRT_Broadcast_1613 + model2_/model/backbone/stages.3/blocks/blocks.0/layers.0/conv2/lab/Mul + model2_model.backbone.stages.3.blocks.0.layers.0.conv2.lab.bias + ONNXTRT_Broadcast_1615 + model2_/model/backbone/stages.3/blocks/blocks.0/layers.0/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.32       0.0095       0.0082       0.1   model2_/model/backbone/stages.3/blocks/blocks.0/layers.1/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.09       0.0086       0.0082       0.1   model2_/model/backbone/stages.3/blocks/blocks.0/layers.1/conv2/conv/Conv + model2_/model/backbone/stages.3/blocks/blocks.0/layers.1/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.26       0.0052       0.0045       0.0   model2_model.backbone.stages.3.blocks.0.layers.1.conv2.lab.scale + ONNXTRT_Broadcast_1617 + model2_/model/backbone/stages.3/blocks/blocks.0/layers.1/conv2/lab/Mul + model2_model.backbone.stages.3.blocks.0.layers.1.conv2.lab.bias + ONNXTRT_Broadcast_1619 + model2_/model/backbone/stages.3/blocks/blocks.0/layers.1/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.26       0.0093       0.0082       0.1   model2_/model/backbone/stages.3/blocks/blocks.0/layers.2/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.04       0.0084       0.0081       0.1   model2_/model/backbone/stages.3/blocks/blocks.0/layers.2/conv2/conv/Conv + model2_/model/backbone/stages.3/blocks/blocks.0/layers.2/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.49       0.0061       0.0044       0.0   model2_model.backbone.stages.3.blocks.0.layers.2.conv2.lab.scale + ONNXTRT_Broadcast_1621 + model2_/model/backbone/stages.3/blocks/blocks.0/layers.2/conv2/lab/Mul + model2_model.backbone.stages.3.blocks.0.layers.2.conv2.lab.bias + ONNXTRT_Broadcast_1623 + model2_/model/backbone/stages.3/blocks/blocks.0/layers.2/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        4.53       0.0187       0.0082       0.1   model2_/model/backbone/stages.3/blocks/blocks.0/layers.3/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.07       0.0085       0.0082       0.1   model2_/model/backbone/stages.3/blocks/blocks.0/layers.3/conv2/conv/Conv + model2_/model/backbone/stages.3/blocks/blocks.0/layers.3/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        3.74       0.0154       0.0052       0.1   model2_model.backbone.stages.3.blocks.0.layers.3.conv2.lab.scale + ONNXTRT_Broadcast_1625 + model2_/model/backbone/stages.3/blocks/blocks.0/layers.3/conv2/lab/Mul + model2_model.backbone.stages.3.blocks.0.layers.3.conv2.lab.bias + ONNXTRT_Broadcast_1627 + model2_/model/backbone/stages.3/blocks/blocks.0/layers.3/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        9.04       0.0372       0.0328       0.3   model2_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.0/conv/Conv + model2_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.0/act/Relu + model2_model.backbone.stages.3.blocks.0.aggregation.0.lab.scale + ONNXTRT_Broadcast_1629 + model2_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.0/lab/Mul + model2_model.backbone.stages.3.blocks.0.aggregation.0.lab.bias + ONNXTRT_Broadcast_1631 + model2_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]        6.34       0.0261       0.0246       0.2   model2_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.1/conv/Conv + model2_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.1/act/Relu + model2_model.backbone.stages.3.blocks.0.aggregation.1.lab.scale + ONNXTRT_Broadcast_1633 + model2_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.1/lab/Mul + model2_model.backbone.stages.3.blocks.0.aggregation.1.lab.bias + ONNXTRT_Broadcast_1635 + model2_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.1/lab/Add
+[06/15/2025-03:39:07] [I]        4.29       0.0177       0.0164       0.1   model2_/model/encoder/input_proj.2/conv/Conv
+[06/15/2025-03:39:07] [I]        5.26       0.0217       0.0208       0.2   model2_/model/encoder/input_proj.1/conv/Conv
+[06/15/2025-03:39:07] [I]        6.63       0.0273       0.0266       0.2   model2_/model/encoder/input_proj.0/conv/Conv
+[06/15/2025-03:39:07] [I]        5.80       0.0239       0.0232       0.2   model1_model.backbone.stem.stem1.lab.scale + ONNXTRT_Broadcast + model1_/model/backbone/stem/stem1/lab/Mul + model1_model.backbone.stem.stem1.lab.bias + ONNXTRT_Broadcast_1 + model1_/model/backbone/stem/stem1/lab/Add
+[06/15/2025-03:39:07] [I]        5.60       0.0231       0.0225       0.2   model1_/model/backbone/stem/Pad
+[06/15/2025-03:39:07] [I]       10.30       0.0424       0.0421       0.3   model1_/model/backbone/stem/stem2a/conv/Conv + model1_/model/backbone/stem/stem2a/act/Relu + model1_model.backbone.stem.stem2a.lab.scale + ONNXTRT_Broadcast_3 + model1_/model/backbone/stem/stem2a/lab/Mul + model1_model.backbone.stem.stem2a.lab.bias + ONNXTRT_Broadcast_5 + model1_/model/backbone/stem/stem2a/lab/Add
+[06/15/2025-03:39:07] [I]        7.44       0.0306       0.0302       0.2   model1_/model/backbone/stem/stem2b/conv/Conv + model1_/model/backbone/stem/stem2b/act/Relu + model1_model.backbone.stem.stem2b.lab.scale + ONNXTRT_Broadcast_7 + model1_/model/backbone/stem/stem2b/lab/Mul + model1_model.backbone.stem.stem2b.lab.bias + ONNXTRT_Broadcast_9 + model1_/model/backbone/stem/stem2b/lab/Add
+[06/15/2025-03:39:07] [I]        6.47       0.0266       0.0261       0.2   model1_/model/backbone/stem/pool/MaxPool
+[06/15/2025-03:39:07] [I]        5.62       0.0231       0.0225       0.2   model1_/model/backbone/stem/pool/MaxPool_output_0 copy
+[06/15/2025-03:39:07] [I]       10.87       0.0447       0.0441       0.3   model1_/model/backbone/stem/stem3/conv/Conv + model1_/model/backbone/stem/stem3/act/Relu + model1_model.backbone.stem.stem3.lab.scale + ONNXTRT_Broadcast_11 + model1_/model/backbone/stem/stem3/lab/Mul + model1_model.backbone.stem.stem3.lab.bias + ONNXTRT_Broadcast_13 + model1_/model/backbone/stem/stem3/lab/Add
+[06/15/2025-03:39:07] [I]        3.30       0.0136       0.0114       0.1   model1_/model/backbone/stem/stem4/conv/Conv + model1_/model/backbone/stem/stem4/act/Relu + model1_model.backbone.stem.stem4.lab.scale + ONNXTRT_Broadcast_15 + model1_/model/backbone/stem/stem4/lab/Mul + model1_model.backbone.stem.stem4.lab.bias + ONNXTRT_Broadcast_17 + model1_/model/backbone/stem/stem4/lab/Add
+[06/15/2025-03:39:07] [I]        1.72       0.0071       0.0064       0.1   Reformatting CopyNode for Input Tensor 0 to model1_/model/backbone/stages.0/blocks/blocks.0/layers.0/conv/Conv + model1_/model/backbone/stages.0/blocks/blocks.0/layers.0/act/Relu + model1_model.backbone.stages.0.blocks.0.layers.0.lab.scale + ONNXTRT_Broadcast_19 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.0/lab/Mul + model1_model.backbone.stages.0.blocks.0.layers.0.lab.bias + ONNXTRT_Broadcast_21 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.0/lab/Add
+[06/15/2025-03:39:07] [I]        8.09       0.0333       0.0184       0.2   model1_/model/backbone/stages.0/blocks/blocks.0/layers.0/conv/Conv + model1_/model/backbone/stages.0/blocks/blocks.0/layers.0/act/Relu + model1_model.backbone.stages.0.blocks.0.layers.0.lab.scale + ONNXTRT_Broadcast_19 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.0/lab/Mul + model1_model.backbone.stages.0.blocks.0.layers.0.lab.bias + ONNXTRT_Broadcast_21 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.0/lab/Add
+[06/15/2025-03:39:07] [I]        4.94       0.0203       0.0187       0.2   model1_/model/backbone/stages.0/blocks/blocks.0/layers.1/conv/Conv + model1_/model/backbone/stages.0/blocks/blocks.0/layers.1/act/Relu + model1_model.backbone.stages.0.blocks.0.layers.1.lab.scale + ONNXTRT_Broadcast_23 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.1/lab/Mul + model1_model.backbone.stages.0.blocks.0.layers.1.lab.bias + ONNXTRT_Broadcast_25 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.1/lab/Add
+[06/15/2025-03:39:07] [I]        4.82       0.0199       0.0184       0.1   model1_/model/backbone/stages.0/blocks/blocks.0/layers.2/conv/Conv + model1_/model/backbone/stages.0/blocks/blocks.0/layers.2/act/Relu + model1_model.backbone.stages.0.blocks.0.layers.2.lab.scale + ONNXTRT_Broadcast_27 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.2/lab/Mul + model1_model.backbone.stages.0.blocks.0.layers.2.lab.bias + ONNXTRT_Broadcast_29 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.2/lab/Add
+[06/15/2025-03:39:07] [I]        4.87       0.0200       0.0184       0.2   model1_/model/backbone/stages.0/blocks/blocks.0/layers.3/conv/Conv + model1_/model/backbone/stages.0/blocks/blocks.0/layers.3/act/Relu + model1_model.backbone.stages.0.blocks.0.layers.3.lab.scale + ONNXTRT_Broadcast_31 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.3/lab/Mul + model1_model.backbone.stages.0.blocks.0.layers.3.lab.bias + ONNXTRT_Broadcast_33 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.3/lab/Add
+[06/15/2025-03:39:07] [I]        1.70       0.0070       0.0061       0.1   Reformatting CopyNode for Output Tensor 0 to model1_/model/backbone/stages.0/blocks/blocks.0/layers.3/conv/Conv + model1_/model/backbone/stages.0/blocks/blocks.0/layers.3/act/Relu + model1_model.backbone.stages.0.blocks.0.layers.3.lab.scale + ONNXTRT_Broadcast_31 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.3/lab/Mul + model1_model.backbone.stages.0.blocks.0.layers.3.lab.bias + ONNXTRT_Broadcast_33 + model1_/model/backbone/stages.0/blocks/blocks.0/layers.3/lab/Add
+[06/15/2025-03:39:07] [I]        7.69       0.0316       0.0103       0.2   model1_/model/backbone/stem/stem4/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        5.07       0.0208       0.0102       0.2   model1_/model/backbone/stages.0/blocks/blocks.0/layers.0/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        5.01       0.0206       0.0102       0.2   model1_/model/backbone/stages.0/blocks/blocks.0/layers.1/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        2.78       0.0114       0.0102       0.1   model1_/model/backbone/stages.0/blocks/blocks.0/layers.2/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]       14.47       0.0595       0.0303       0.4   model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.0/conv/Conv + model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.0/act/Relu + model1_model.backbone.stages.0.blocks.0.aggregation.0.lab.scale + ONNXTRT_Broadcast_35 + model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.0/lab/Mul + model1_model.backbone.stages.0.blocks.0.aggregation.0.lab.bias + ONNXTRT_Broadcast_37 + model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]        2.89       0.0119       0.0099       0.1   Reformatting CopyNode for Input Tensor 0 to model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/conv/Conv + model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/act/Relu + model1_model.backbone.stages.0.blocks.0.aggregation.1.lab.scale + ONNXTRT_Broadcast_39 + model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/lab/Mul + model1_model.backbone.stages.0.blocks.0.aggregation.1.lab.bias + ONNXTRT_Broadcast_41 + model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/lab/Add
+[06/15/2025-03:39:07] [I]        5.81       0.0239       0.0229       0.2   model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/conv/Conv + model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/act/Relu + model1_model.backbone.stages.0.blocks.0.aggregation.1.lab.scale + ONNXTRT_Broadcast_39 + model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/lab/Mul + model1_model.backbone.stages.0.blocks.0.aggregation.1.lab.bias + ONNXTRT_Broadcast_41 + model1_/model/backbone/stages.0/blocks/blocks.0/aggregation/aggregation.1/lab/Add
+[06/15/2025-03:39:07] [I]        3.08       0.0127       0.0119       0.1   model1_/model/backbone/stages.1/downsample/conv/Conv
+[06/15/2025-03:39:07] [I]        9.62       0.0396       0.0246       0.3   model1_/model/backbone/stages.1/blocks/blocks.0/layers.0/conv/Conv + model1_/model/backbone/stages.1/blocks/blocks.0/layers.0/act/Relu + model1_model.backbone.stages.1.blocks.0.layers.0.lab.scale + ONNXTRT_Broadcast_43 + model1_/model/backbone/stages.1/blocks/blocks.0/layers.0/lab/Mul + model1_model.backbone.stages.1.blocks.0.layers.0.lab.bias + ONNXTRT_Broadcast_45 + model1_/model/backbone/stages.1/blocks/blocks.0/layers.0/lab/Add
+[06/15/2025-03:39:07] [I]        8.23       0.0339       0.0203       0.3   model1_/model/backbone/stages.1/blocks/blocks.0/layers.1/conv/Conv + model1_/model/backbone/stages.1/blocks/blocks.0/layers.1/act/Relu + model1_model.backbone.stages.1.blocks.0.layers.1.lab.scale + ONNXTRT_Broadcast_47 + model1_/model/backbone/stages.1/blocks/blocks.0/layers.1/lab/Mul + model1_model.backbone.stages.1.blocks.0.layers.1.lab.bias + ONNXTRT_Broadcast_49 + model1_/model/backbone/stages.1/blocks/blocks.0/layers.1/lab/Add
+[06/15/2025-03:39:07] [I]        7.11       0.0293       0.0205       0.2   model1_/model/backbone/stages.1/blocks/blocks.0/layers.2/conv/Conv + model1_/model/backbone/stages.1/blocks/blocks.0/layers.2/act/Relu + model1_model.backbone.stages.1.blocks.0.layers.2.lab.scale + ONNXTRT_Broadcast_51 + model1_/model/backbone/stages.1/blocks/blocks.0/layers.2/lab/Mul + model1_model.backbone.stages.1.blocks.0.layers.2.lab.bias + ONNXTRT_Broadcast_53 + model1_/model/backbone/stages.1/blocks/blocks.0/layers.2/lab/Add
+[06/15/2025-03:39:07] [I]        5.33       0.0219       0.0218       0.2   model1_/model/backbone/stages.1/blocks/blocks.0/layers.3/conv/Conv + model1_/model/backbone/stages.1/blocks/blocks.0/layers.3/act/Relu + model1_model.backbone.stages.1.blocks.0.layers.3.lab.scale + ONNXTRT_Broadcast_55 + model1_/model/backbone/stages.1/blocks/blocks.0/layers.3/lab/Mul + model1_model.backbone.stages.1.blocks.0.layers.3.lab.bias + ONNXTRT_Broadcast_57 + model1_/model/backbone/stages.1/blocks/blocks.0/layers.3/lab/Add
+[06/15/2025-03:39:07] [I]        8.95       0.0368       0.0102       0.3   model1_/model/backbone/stages.1/downsample/conv/Conv_output_0 copy
+[06/15/2025-03:39:07] [I]        5.07       0.0209       0.0103       0.2   model1_/model/backbone/stages.1/blocks/blocks.0/layers.0/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        7.34       0.0302       0.0103       0.2   model1_/model/backbone/stages.1/blocks/blocks.0/layers.1/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]        3.22       0.0133       0.0102       0.1   model1_/model/backbone/stages.1/blocks/blocks.0/layers.2/lab/Add_output_0 copy
+[06/15/2025-03:39:07] [I]       12.18       0.0501       0.0328       0.4   model1_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.0/conv/Conv + model1_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.0/act/Relu + model1_model.backbone.stages.1.blocks.0.aggregation.0.lab.scale + ONNXTRT_Broadcast_59 + model1_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.0/lab/Mul + model1_model.backbone.stages.1.blocks.0.aggregation.0.lab.bias + ONNXTRT_Broadcast_61 + model1_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]        9.05       0.0373       0.0326       0.3   model1_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.1/conv/Conv + model1_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.1/act/Relu + model1_model.backbone.stages.1.blocks.0.aggregation.1.lab.scale + ONNXTRT_Broadcast_63 + model1_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.1/lab/Mul + model1_model.backbone.stages.1.blocks.0.aggregation.1.lab.bias + ONNXTRT_Broadcast_65 + model1_/model/backbone/stages.1/blocks/blocks.0/aggregation/aggregation.1/lab/Add
+[06/15/2025-03:39:07] [I]        8.52       0.0351       0.0126       0.3   model1_/model/backbone/stages.2/downsample/conv/Conv
+[06/15/2025-03:39:07] [I]        7.85       0.0323       0.0116       0.2   model1_/model/backbone/stages.2/blocks/blocks.0/layers.0/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        8.16       0.0336       0.0115       0.3   model1_/model/backbone/stages.2/blocks/blocks.0/layers.0/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.0/layers.0/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        2.50       0.0103       0.0070       0.1   model1_model.backbone.stages.2.blocks.0.layers.0.conv2.lab.scale + ONNXTRT_Broadcast_67 + model1_/model/backbone/stages.2/blocks/blocks.0/layers.0/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.0.layers.0.conv2.lab.bias + ONNXTRT_Broadcast_69 + model1_/model/backbone/stages.2/blocks/blocks.0/layers.0/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        8.11       0.0334       0.0091       0.3   model1_/model/backbone/stages.2/blocks/blocks.0/layers.1/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        6.31       0.0260       0.0110       0.2   model1_/model/backbone/stages.2/blocks/blocks.0/layers.1/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.0/layers.1/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        3.52       0.0145       0.0064       0.1   model1_model.backbone.stages.2.blocks.0.layers.1.conv2.lab.scale + ONNXTRT_Broadcast_71 + model1_/model/backbone/stages.2/blocks/blocks.0/layers.1/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.0.layers.1.conv2.lab.bias + ONNXTRT_Broadcast_73 + model1_/model/backbone/stages.2/blocks/blocks.0/layers.1/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        4.21       0.0173       0.0093       0.1   model1_/model/backbone/stages.2/blocks/blocks.0/layers.2/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        5.57       0.0229       0.0107       0.2   model1_/model/backbone/stages.2/blocks/blocks.0/layers.2/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.0/layers.2/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        3.40       0.0140       0.0069       0.1   model1_model.backbone.stages.2.blocks.0.layers.2.conv2.lab.scale + ONNXTRT_Broadcast_75 + model1_/model/backbone/stages.2/blocks/blocks.0/layers.2/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.0.layers.2.conv2.lab.bias + ONNXTRT_Broadcast_77 + model1_/model/backbone/stages.2/blocks/blocks.0/layers.2/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        3.73       0.0153       0.0091       0.1   model1_/model/backbone/stages.2/blocks/blocks.0/layers.3/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        6.96       0.0286       0.0108       0.2   model1_/model/backbone/stages.2/blocks/blocks.0/layers.3/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.0/layers.3/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.82       0.0075       0.0061       0.1   model1_model.backbone.stages.2.blocks.0.layers.3.conv2.lab.scale + ONNXTRT_Broadcast_79 + model1_/model/backbone/stages.2/blocks/blocks.0/layers.3/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.0.layers.3.conv2.lab.bias + ONNXTRT_Broadcast_81 + model1_/model/backbone/stages.2/blocks/blocks.0/layers.3/conv2/lab/Add
+[06/15/2025-03:39:07] [I]       22.76       0.0937       0.0289       0.7   model1_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.0/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.0/act/Relu + model1_model.backbone.stages.2.blocks.0.aggregation.0.lab.scale + ONNXTRT_Broadcast_83 + model1_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.0/lab/Mul + model1_model.backbone.stages.2.blocks.0.aggregation.0.lab.bias + ONNXTRT_Broadcast_85 + model1_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]       16.69       0.0687       0.0267       0.5   model1_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.1/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.1/act/Relu + model1_model.backbone.stages.2.blocks.0.aggregation.1.lab.scale + ONNXTRT_Broadcast_87 + model1_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.1/lab/Mul + model1_model.backbone.stages.2.blocks.0.aggregation.1.lab.bias + ONNXTRT_Broadcast_89 + model1_/model/backbone/stages.2/blocks/blocks.0/aggregation/aggregation.1/lab/Add
+[06/15/2025-03:39:07] [I]        3.86       0.0159       0.0161       0.1   model1_/model/backbone/stages.2/blocks/blocks.1/layers.0/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.83       0.0117       0.0116       0.1   model1_/model/backbone/stages.2/blocks/blocks.1/layers.0/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.1/layers.0/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.76       0.0072       0.0071       0.1   model1_model.backbone.stages.2.blocks.1.layers.0.conv2.lab.scale + ONNXTRT_Broadcast_91 + model1_/model/backbone/stages.2/blocks/blocks.1/layers.0/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.1.layers.0.conv2.lab.bias + ONNXTRT_Broadcast_93 + model1_/model/backbone/stages.2/blocks/blocks.1/layers.0/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.34       0.0096       0.0096       0.1   model1_/model/backbone/stages.2/blocks/blocks.1/layers.1/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.96       0.0122       0.0110       0.1   model1_/model/backbone/stages.2/blocks/blocks.1/layers.1/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.1/layers.1/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.74       0.0072       0.0065       0.1   model1_model.backbone.stages.2.blocks.1.layers.1.conv2.lab.scale + ONNXTRT_Broadcast_95 + model1_/model/backbone/stages.2/blocks/blocks.1/layers.1/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.1.layers.1.conv2.lab.bias + ONNXTRT_Broadcast_97 + model1_/model/backbone/stages.2/blocks/blocks.1/layers.1/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        3.15       0.0130       0.0090       0.1   model1_/model/backbone/stages.2/blocks/blocks.1/layers.2/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.79       0.0115       0.0112       0.1   model1_/model/backbone/stages.2/blocks/blocks.1/layers.2/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.1/layers.2/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        2.09       0.0086       0.0075       0.1   model1_model.backbone.stages.2.blocks.1.layers.2.conv2.lab.scale + ONNXTRT_Broadcast_99 + model1_/model/backbone/stages.2/blocks/blocks.1/layers.2/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.1.layers.2.conv2.lab.bias + ONNXTRT_Broadcast_101 + model1_/model/backbone/stages.2/blocks/blocks.1/layers.2/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.61       0.0107       0.0093       0.1   model1_/model/backbone/stages.2/blocks/blocks.1/layers.3/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.97       0.0122       0.0110       0.1   model1_/model/backbone/stages.2/blocks/blocks.1/layers.3/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.1/layers.3/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.95       0.0080       0.0068       0.1   model1_model.backbone.stages.2.blocks.1.layers.3.conv2.lab.scale + ONNXTRT_Broadcast_103 + model1_/model/backbone/stages.2/blocks/blocks.1/layers.3/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.1.layers.3.conv2.lab.bias + ONNXTRT_Broadcast_105 + model1_/model/backbone/stages.2/blocks/blocks.1/layers.3/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        9.77       0.0402       0.0389       0.3   model1_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.0/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.0/act/Relu + model1_model.backbone.stages.2.blocks.1.aggregation.0.lab.scale + ONNXTRT_Broadcast_107 + model1_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.0/lab/Mul + model1_model.backbone.stages.2.blocks.1.aggregation.0.lab.bias + ONNXTRT_Broadcast_109 + model1_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]        6.38       0.0262       0.0258       0.2   model1_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.1/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.1/act/Relu
+[06/15/2025-03:39:07] [I]        4.77       0.0196       0.0197       0.1   PWN(model1_model.backbone.stages.2.blocks.1.aggregation.1.lab.scale + ONNXTRT_Broadcast_111 + model1_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.1/lab/Mul + model1_model.backbone.stages.2.blocks.1.aggregation.1.lab.bias + ONNXTRT_Broadcast_113 + model1_/model/backbone/stages.2/blocks/blocks.1/aggregation/aggregation.1/lab/Add, PWN(model1_/model/backbone/stages.2/blocks/blocks.1/Add))
+[06/15/2025-03:39:07] [I]        4.33       0.0178       0.0181       0.1   model1_/model/backbone/stages.2/blocks/blocks.2/layers.0/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.93       0.0120       0.0119       0.1   model1_/model/backbone/stages.2/blocks/blocks.2/layers.0/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.2/layers.0/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.69       0.0069       0.0066       0.1   model1_model.backbone.stages.2.blocks.2.layers.0.conv2.lab.scale + ONNXTRT_Broadcast_115 + model1_/model/backbone/stages.2/blocks/blocks.2/layers.0/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.2.layers.0.conv2.lab.bias + ONNXTRT_Broadcast_117 + model1_/model/backbone/stages.2/blocks/blocks.2/layers.0/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.48       0.0102       0.0100       0.1   model1_/model/backbone/stages.2/blocks/blocks.2/layers.1/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        3.00       0.0123       0.0113       0.1   model1_/model/backbone/stages.2/blocks/blocks.2/layers.1/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.2/layers.1/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        4.85       0.0199       0.0082       0.1   model1_model.backbone.stages.2.blocks.2.layers.1.conv2.lab.scale + ONNXTRT_Broadcast_119 + model1_/model/backbone/stages.2/blocks/blocks.2/layers.1/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.2.layers.1.conv2.lab.bias + ONNXTRT_Broadcast_121 + model1_/model/backbone/stages.2/blocks/blocks.2/layers.1/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.50       0.0103       0.0095       0.1   model1_/model/backbone/stages.2/blocks/blocks.2/layers.2/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.80       0.0115       0.0111       0.1   model1_/model/backbone/stages.2/blocks/blocks.2/layers.2/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.2/layers.2/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.84       0.0076       0.0069       0.1   model1_model.backbone.stages.2.blocks.2.layers.2.conv2.lab.scale + ONNXTRT_Broadcast_123 + model1_/model/backbone/stages.2/blocks/blocks.2/layers.2/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.2.layers.2.conv2.lab.bias + ONNXTRT_Broadcast_125 + model1_/model/backbone/stages.2/blocks/blocks.2/layers.2/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.50       0.0103       0.0096       0.1   model1_/model/backbone/stages.2/blocks/blocks.2/layers.3/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        3.93       0.0162       0.0109       0.1   model1_/model/backbone/stages.2/blocks/blocks.2/layers.3/conv2/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.2/layers.3/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.81       0.0075       0.0073       0.1   model1_model.backbone.stages.2.blocks.2.layers.3.conv2.lab.scale + ONNXTRT_Broadcast_127 + model1_/model/backbone/stages.2/blocks/blocks.2/layers.3/conv2/lab/Mul + model1_model.backbone.stages.2.blocks.2.layers.3.conv2.lab.bias + ONNXTRT_Broadcast_129 + model1_/model/backbone/stages.2/blocks/blocks.2/layers.3/conv2/lab/Add
+[06/15/2025-03:39:07] [I]       10.70       0.0440       0.0391       0.3   model1_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.0/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.0/act/Relu + model1_model.backbone.stages.2.blocks.2.aggregation.0.lab.scale + ONNXTRT_Broadcast_131 + model1_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.0/lab/Mul + model1_model.backbone.stages.2.blocks.2.aggregation.0.lab.bias + ONNXTRT_Broadcast_133 + model1_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]        6.44       0.0265       0.0265       0.2   model1_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.1/conv/Conv + model1_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.1/act/Relu
+[06/15/2025-03:39:07] [I]        4.88       0.0201       0.0202       0.2   PWN(model1_model.backbone.stages.2.blocks.2.aggregation.1.lab.scale + ONNXTRT_Broadcast_135 + model1_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.1/lab/Mul + model1_model.backbone.stages.2.blocks.2.aggregation.1.lab.bias + ONNXTRT_Broadcast_137 + model1_/model/backbone/stages.2/blocks/blocks.2/aggregation/aggregation.1/lab/Add, PWN(model1_/model/backbone/stages.2/blocks/blocks.2/Add))
+[06/15/2025-03:39:07] [I]        2.72       0.0112       0.0108       0.1   model1_/model/backbone/stages.3/downsample/conv/Conv
+[06/15/2025-03:39:07] [I]        3.43       0.0141       0.0140       0.1   model1_/model/backbone/stages.3/blocks/blocks.0/layers.0/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.55       0.0105       0.0102       0.1   model1_/model/backbone/stages.3/blocks/blocks.0/layers.0/conv2/conv/Conv + model1_/model/backbone/stages.3/blocks/blocks.0/layers.0/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.82       0.0075       0.0066       0.1   model1_model.backbone.stages.3.blocks.0.layers.0.conv2.lab.scale + ONNXTRT_Broadcast_139 + model1_/model/backbone/stages.3/blocks/blocks.0/layers.0/conv2/lab/Mul + model1_model.backbone.stages.3.blocks.0.layers.0.conv2.lab.bias + ONNXTRT_Broadcast_141 + model1_/model/backbone/stages.3/blocks/blocks.0/layers.0/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.68       0.0110       0.0102       0.1   model1_/model/backbone/stages.3/blocks/blocks.0/layers.1/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.48       0.0102       0.0101       0.1   model1_/model/backbone/stages.3/blocks/blocks.0/layers.1/conv2/conv/Conv + model1_/model/backbone/stages.3/blocks/blocks.0/layers.1/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.77       0.0073       0.0065       0.1   model1_model.backbone.stages.3.blocks.0.layers.1.conv2.lab.scale + ONNXTRT_Broadcast_143 + model1_/model/backbone/stages.3/blocks/blocks.0/layers.1/conv2/lab/Mul + model1_model.backbone.stages.3.blocks.0.layers.1.conv2.lab.bias + ONNXTRT_Broadcast_145 + model1_/model/backbone/stages.3/blocks/blocks.0/layers.1/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.83       0.0116       0.0101       0.1   model1_/model/backbone/stages.3/blocks/blocks.0/layers.2/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.47       0.0102       0.0100       0.1   model1_/model/backbone/stages.3/blocks/blocks.0/layers.2/conv2/conv/Conv + model1_/model/backbone/stages.3/blocks/blocks.0/layers.2/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.84       0.0076       0.0061       0.1   model1_model.backbone.stages.3.blocks.0.layers.2.conv2.lab.scale + ONNXTRT_Broadcast_147 + model1_/model/backbone/stages.3/blocks/blocks.0/layers.2/conv2/lab/Mul + model1_model.backbone.stages.3.blocks.0.layers.2.conv2.lab.bias + ONNXTRT_Broadcast_149 + model1_/model/backbone/stages.3/blocks/blocks.0/layers.2/conv2/lab/Add
+[06/15/2025-03:39:07] [I]        2.61       0.0107       0.0102       0.1   model1_/model/backbone/stages.3/blocks/blocks.0/layers.3/conv1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.56       0.0105       0.0102       0.1   model1_/model/backbone/stages.3/blocks/blocks.0/layers.3/conv2/conv/Conv + model1_/model/backbone/stages.3/blocks/blocks.0/layers.3/conv2/act/Relu
+[06/15/2025-03:39:07] [I]        1.97       0.0081       0.0068       0.1   model1_model.backbone.stages.3.blocks.0.layers.3.conv2.lab.scale + ONNXTRT_Broadcast_151 + model1_/model/backbone/stages.3/blocks/blocks.0/layers.3/conv2/lab/Mul + model1_model.backbone.stages.3.blocks.0.layers.3.conv2.lab.bias + ONNXTRT_Broadcast_153 + model1_/model/backbone/stages.3/blocks/blocks.0/layers.3/conv2/lab/Add
+[06/15/2025-03:39:07] [I]       18.10       0.0745       0.0376       0.6   model1_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.0/conv/Conv + model1_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.0/act/Relu + model1_model.backbone.stages.3.blocks.0.aggregation.0.lab.scale + ONNXTRT_Broadcast_155 + model1_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.0/lab/Mul + model1_model.backbone.stages.3.blocks.0.aggregation.0.lab.bias + ONNXTRT_Broadcast_157 + model1_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.0/lab/Add
+[06/15/2025-03:39:07] [I]        6.68       0.0275       0.0266       0.2   model1_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.1/conv/Conv + model1_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.1/act/Relu + model1_model.backbone.stages.3.blocks.0.aggregation.1.lab.scale + ONNXTRT_Broadcast_159 + model1_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.1/lab/Mul + model1_model.backbone.stages.3.blocks.0.aggregation.1.lab.bias + ONNXTRT_Broadcast_161 + model1_/model/backbone/stages.3/blocks/blocks.0/aggregation/aggregation.1/lab/Add
+[06/15/2025-03:39:07] [I]        5.07       0.0209       0.0198       0.2   model1_/model/encoder/input_proj.2/conv/Conv
+[06/15/2025-03:39:07] [I]        0.74       0.0030       0.0020       0.0   dummy_shape_call__mye14842_0_myl194_0
+[06/15/2025-03:39:07] [I]        2.07       0.0085       0.0067       0.1   __myl_ResTraAddTra_myl194_1
+[06/15/2025-03:39:07] [I]        2.78       0.0114       0.0102       0.1   __myl_ResTraAddTra_myl194_3
+[06/15/2025-03:39:07] [I]        4.58       0.0189       0.0135       0.1   model2_/model/encoder/encoder_0/layers_0/self_attn/MatMul_2_myl194_6
+[06/15/2025-03:39:07] [I]        4.08       0.0168       0.0126       0.1   model2_/model/encoder/encoder_0/layers_0/self_attn/MatMul_1+model2_/model/encoder/encoder_0/layers_0/self_attn/MatMul_myl194_8
+[06/15/2025-03:39:07] [I]        5.11       0.0210       0.0171       0.2   model1_/model/encoder/encoder_0/layers_0/self_attn/MatMul_2_myl194_10
+[06/15/2025-03:39:07] [I]        4.07       0.0167       0.0143       0.1   model1_/model/encoder/encoder_0/layers_0/self_attn/MatMul_1+model1_/model/encoder/encoder_0/layers_0/self_attn/MatMul_myl194_13
+[06/15/2025-03:39:07] [I]        4.50       0.0185       0.0164       0.1   _gemm_mha_v2_myl194_15
+[06/15/2025-03:39:07] [I]        1.84       0.0076       0.0063       0.1   __myl_Tra_myl194_16
+[06/15/2025-03:39:07] [I]        4.60       0.0189       0.0172       0.1   _gemm_mha_v2_myl194_18
+[06/15/2025-03:39:07] [I]        1.91       0.0079       0.0074       0.1   __myl_Tra_myl194_19
+[06/15/2025-03:39:07] [I]        2.65       0.0109       0.0091       0.1   model2_/model/encoder/encoder_0/layers_0/self_attn/Gemm_myl194_20
+[06/15/2025-03:39:07] [I]        2.29       0.0094       0.0077       0.1   __myl_TraResResAddCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl194_21
+[06/15/2025-03:39:07] [I]        4.68       0.0192       0.0164       0.1   __myl_Fc_myl194_22
+[06/15/2025-03:39:07] [I]        4.81       0.0198       0.0183       0.1   model2_/model/encoder/encoder_0/layers_0/linear2/MatMul_myl194_23
+[06/15/2025-03:39:07] [I]        4.29       0.0177       0.0080       0.1   __myl_AddCasMeaSubMulMea_myl194_24
+[06/15/2025-03:39:07] [I]        1.67       0.0069       0.0060       0.1   __myl_AddSqrDivMulCasMulAddTraRes_myl194_25
+[06/15/2025-03:39:07] [I]        2.78       0.0114       0.0082       0.1   model1_/model/encoder/encoder_0/layers_0/self_attn/Gemm_myl194_26
+[06/15/2025-03:39:07] [I]        2.51       0.0103       0.0082       0.1   __myl_TraResResAddCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl194_27
+[06/15/2025-03:39:07] [I]        4.54       0.0187       0.0159       0.1   __myl_Fc_myl194_28
+[06/15/2025-03:39:07] [I]        4.68       0.0193       0.0184       0.1   model1_/model/encoder/encoder_0/layers_0/linear2/MatMul_myl194_29
+[06/15/2025-03:39:07] [I]        1.95       0.0080       0.0075       0.1   __myl_AddCasMeaSubMulMea_myl194_30
+[06/15/2025-03:39:07] [I]        2.62       0.0108       0.0082       0.1   __myl_AddSqrDivMulCasMulAddTraRes_myl194_31
+[06/15/2025-03:39:07] [I]        2.82       0.0116       0.0083       0.1   model2_/model/encoder/lateral_convs.0/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        3.70       0.0152       0.0045       0.1   model2_/model/encoder/Resize
+[06/15/2025-03:39:07] [I]        2.49       0.0103       0.0082       0.1   model2_/model/encoder/Resize_output_0 copy
+[06/15/2025-03:39:07] [I]        5.43       0.0223       0.0204       0.2   model2_/model/encoder/fpn_blocks.0/cv1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv1/act/Mul))
+[06/15/2025-03:39:07] [I]        2.87       0.0118       0.0113       0.1   model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv1/conv_bn_fused/Conv || model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        2.24       0.0092       0.0053       0.1   PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        5.53       0.0227       0.0201       0.2   model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        4.38       0.0180       0.0174       0.1   model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        1.46       0.0060       0.0054       0.0   PWN(PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv2/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv2/act/Mul)), PWN(model2_/model/encoder/fpn_blocks.0/cv2/cv2.0/Add)))
+[06/15/2025-03:39:07] [I]        5.65       0.0232       0.0196       0.2   model2_/model/encoder/fpn_blocks.0/cv2/cv2.1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv2/cv2.1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv2/cv2.1/act/Mul))
+[06/15/2025-03:39:07] [I]        2.79       0.0115       0.0091       0.1   model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv1/conv_bn_fused/Conv || model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        1.79       0.0074       0.0046       0.1   PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]       10.25       0.0422       0.0204       0.3   model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        4.33       0.0178       0.0168       0.1   model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        1.41       0.0058       0.0053       0.0   PWN(PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv2/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv2/act/Mul)), PWN(model2_/model/encoder/fpn_blocks.0/cv3/cv3.0/Add)))
+[06/15/2025-03:39:07] [I]        5.38       0.0222       0.0200       0.2   model2_/model/encoder/fpn_blocks.0/cv3/cv3.1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv3/cv3.1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv3/cv3.1/act/Mul))
+[06/15/2025-03:39:07] [I]        2.57       0.0106       0.0095       0.1   model2_/model/encoder/fpn_blocks.0/Split_output_0 copy
+[06/15/2025-03:39:07] [I]        2.69       0.0111       0.0095       0.1   model2_/model/encoder/fpn_blocks.0/Split_output_1 copy
+[06/15/2025-03:39:07] [I]        6.49       0.0267       0.0220       0.2   model2_/model/encoder/fpn_blocks.0/cv4/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.0/cv4/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.0/cv4/act/Mul))
+[06/15/2025-03:39:07] [I]        2.93       0.0121       0.0110       0.1   model2_/model/encoder/lateral_convs.1/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        2.33       0.0096       0.0073       0.1   model2_/model/encoder/Resize_1
+[06/15/2025-03:39:07] [I]        4.67       0.0192       0.0102       0.1   model2_/model/encoder/Resize_1_output_0 copy
+[06/15/2025-03:39:07] [I]       12.15       0.0500       0.0476       0.4   model2_/model/encoder/fpn_blocks.1/cv1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv1/act/Mul))
+[06/15/2025-03:39:07] [I]        3.97       0.0164       0.0155       0.1   model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]       10.86       0.0447       0.0344       0.3   model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        4.27       0.0176       0.0164       0.1   model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]       13.38       0.0551       0.0441       0.4   model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/conv/Conv + PWN(PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv2/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv2/act/Mul)), PWN(model2_/model/encoder/fpn_blocks.1/cv2/cv2.0/Add)))
+[06/15/2025-03:39:07] [I]       10.92       0.0449       0.0346       0.3   model2_/model/encoder/fpn_blocks.1/cv2/cv2.1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv2/cv2.1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv2/cv2.1/act/Mul))
+[06/15/2025-03:39:07] [I]        5.53       0.0227       0.0123       0.2   model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]       15.15       0.0624       0.0340       0.5   model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        3.27       0.0135       0.0113       0.1   model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]       14.17       0.0583       0.0430       0.4   model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/conv/Conv + PWN(PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv2/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv2/act/Mul)), PWN(model2_/model/encoder/fpn_blocks.1/cv3/cv3.0/Add)))
+[06/15/2025-03:39:07] [I]       13.15       0.0541       0.0342       0.4   model2_/model/encoder/fpn_blocks.1/cv3/cv3.1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv3/cv3.1/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv3/cv3.1/act/Mul))
+[06/15/2025-03:39:07] [I]        6.36       0.0262       0.0243       0.2   model2_/model/encoder/fpn_blocks.1/Split_output_0 copy
+[06/15/2025-03:39:07] [I]        6.03       0.0248       0.0237       0.2   model2_/model/encoder/fpn_blocks.1/Split_output_1 copy
+[06/15/2025-03:39:07] [I]       12.50       0.0514       0.0467       0.4   model2_/model/encoder/fpn_blocks.1/cv4/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/fpn_blocks.1/cv4/act/Sigmoid), PWN(model2_/model/encoder/fpn_blocks.1/cv4/act/Mul))
+[06/15/2025-03:39:07] [I]        7.65       0.0315       0.0208       0.2   model2_/model/encoder/downsample_convs.0/downsample_convs.0.0/cv1/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        2.66       0.0109       0.0089       0.1   model2_/model/encoder/downsample_convs.0/downsample_convs.0.0/cv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        2.49       0.0102       0.0094       0.1   model2_/model/encoder/lateral_convs.1/conv_bn_fused/Conv_output_0 copy
+[06/15/2025-03:39:07] [I]        5.46       0.0225       0.0203       0.2   model2_/model/encoder/pan_blocks.0/cv1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/pan_blocks.0/cv1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv1/act/Mul))
+[06/15/2025-03:39:07] [I]        4.25       0.0175       0.0104       0.1   model2_/model/encoder/pan_blocks.0/cv2/cv2.0/conv1/conv_bn_fused/Conv || model2_/model/encoder/pan_blocks.0/cv2/cv2.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        3.74       0.0154       0.0052       0.1   PWN(PWN(model2_/model/encoder/pan_blocks.0/cv2/cv2.0/conv1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv2/cv2.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        9.27       0.0382       0.0204       0.3   model2_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model2_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        7.31       0.0301       0.0169       0.2   model2_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        1.54       0.0063       0.0057       0.0   PWN(PWN(PWN(model2_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model2_/model/encoder/pan_blocks.0/cv2/cv2.0/conv2/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv2/cv2.0/conv2/act/Mul)), PWN(model2_/model/encoder/pan_blocks.0/cv2/cv2.0/Add)))
+[06/15/2025-03:39:07] [I]        9.98       0.0411       0.0203       0.3   model2_/model/encoder/pan_blocks.0/cv2/cv2.1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/pan_blocks.0/cv2/cv2.1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv2/cv2.1/act/Mul))
+[06/15/2025-03:39:07] [I]        2.89       0.0119       0.0097       0.1   model2_/model/encoder/pan_blocks.0/cv3/cv3.0/conv1/conv_bn_fused/Conv || model2_/model/encoder/pan_blocks.0/cv3/cv3.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        3.68       0.0151       0.0053       0.1   PWN(PWN(model2_/model/encoder/pan_blocks.0/cv3/cv3.0/conv1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv3/cv3.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        5.71       0.0235       0.0200       0.2   model2_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model2_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        4.72       0.0194       0.0168       0.1   model2_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.25       0.0093       0.0055       0.1   PWN(PWN(PWN(model2_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model2_/model/encoder/pan_blocks.0/cv3/cv3.0/conv2/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv3/cv3.0/conv2/act/Mul)), PWN(model2_/model/encoder/pan_blocks.0/cv3/cv3.0/Add)))
+[06/15/2025-03:39:07] [I]       10.50       0.0432       0.0203       0.3   model2_/model/encoder/pan_blocks.0/cv3/cv3.1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/pan_blocks.0/cv3/cv3.1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv3/cv3.1/act/Mul))
+[06/15/2025-03:39:07] [I]        2.63       0.0108       0.0097       0.1   model2_/model/encoder/pan_blocks.0/Split_output_0 copy
+[06/15/2025-03:39:07] [I]        2.61       0.0107       0.0097       0.1   model2_/model/encoder/pan_blocks.0/Split_output_1 copy
+[06/15/2025-03:39:07] [I]       10.85       0.0447       0.0225       0.3   model2_/model/encoder/pan_blocks.0/cv4/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/pan_blocks.0/cv4/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.0/cv4/act/Mul))
+[06/15/2025-03:39:07] [I]        2.91       0.0120       0.0114       0.1   model2_/model/encoder/downsample_convs.1/downsample_convs.1.0/cv1/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        4.26       0.0175       0.0061       0.1   model2_/model/encoder/downsample_convs.1/downsample_convs.1.0/cv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        1.97       0.0081       0.0061       0.1   model2_/model/encoder/lateral_convs.0/conv_bn_fused/Conv_output_0 copy
+[06/15/2025-03:39:07] [I]        4.91       0.0202       0.0143       0.2   model2_/model/encoder/pan_blocks.1/cv1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/pan_blocks.1/cv1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.1/cv1/act/Mul))
+[06/15/2025-03:39:07] [I]        2.23       0.0092       0.0082       0.1   model2_/model/encoder/pan_blocks.1/cv2/cv2.0/conv1/conv_bn_fused/Conv || model2_/model/encoder/pan_blocks.1/cv2/cv2.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        1.38       0.0057       0.0043       0.0   PWN(PWN(model2_/model/encoder/pan_blocks.1/cv2/cv2.0/conv1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.1/cv2/cv2.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        5.58       0.0230       0.0168       0.2   model2_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model2_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        4.23       0.0174       0.0143       0.1   model2_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.01       0.0083       0.0058       0.1   PWN(PWN(PWN(model2_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model2_/model/encoder/pan_blocks.1/cv2/cv2.0/conv2/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.1/cv2/cv2.0/conv2/act/Mul)), PWN(model2_/model/encoder/pan_blocks.1/cv2/cv2.0/Add)))
+[06/15/2025-03:39:07] [I]        4.77       0.0196       0.0172       0.1   model2_/model/encoder/pan_blocks.1/cv2/cv2.1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/pan_blocks.1/cv2/cv2.1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.1/cv2/cv2.1/act/Mul))
+[06/15/2025-03:39:07] [I]        4.42       0.0182       0.0081       0.1   model2_/model/encoder/pan_blocks.1/cv3/cv3.0/conv1/conv_bn_fused/Conv || model2_/model/encoder/pan_blocks.1/cv3/cv3.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        1.55       0.0064       0.0046       0.0   PWN(PWN(model2_/model/encoder/pan_blocks.1/cv3/cv3.0/conv1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.1/cv3/cv3.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        8.21       0.0338       0.0174       0.3   model2_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model2_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        4.18       0.0172       0.0145       0.1   model2_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        1.67       0.0069       0.0060       0.1   PWN(PWN(PWN(model2_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model2_/model/encoder/pan_blocks.1/cv3/cv3.0/conv2/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.1/cv3/cv3.0/conv2/act/Mul)), PWN(model2_/model/encoder/pan_blocks.1/cv3/cv3.0/Add)))
+[06/15/2025-03:39:07] [I]        5.15       0.0212       0.0179       0.2   model2_/model/encoder/pan_blocks.1/cv3/cv3.1/conv_bn_fused/Conv + PWN(PWN(model2_/model/encoder/pan_blocks.1/cv3/cv3.1/act/Sigmoid), PWN(model2_/model/encoder/pan_blocks.1/cv3/cv3.1/act/Mul))
+[06/15/2025-03:39:07] [I]        1.78       0.0073       0.0061       0.1   model2_/model/encoder/pan_blocks.1/Split_output_0 copy
+[06/15/2025-03:39:07] [I]        3.03       0.0125       0.0063       0.1   model2_/model/encoder/pan_blocks.1/Split_output_1 copy
+[06/15/2025-03:39:07] [I]        5.97       0.0246       0.0129       0.2   model2_/model/encoder/pan_blocks.1/cv4/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        5.34       0.0220       0.0099       0.2   model1_/model/encoder/lateral_convs.0/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        2.11       0.0087       0.0061       0.1   model1_/model/encoder/Resize
+[06/15/2025-03:39:07] [I]        6.69       0.0275       0.0226       0.2   model1_/model/encoder/input_proj.1/conv/Conv
+[06/15/2025-03:39:07] [I]        8.82       0.0363       0.0102       0.3   model1_/model/encoder/Resize_output_0 copy
+[06/15/2025-03:39:07] [I]        7.75       0.0319       0.0217       0.2   model1_/model/encoder/fpn_blocks.0/cv1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv1/act/Mul))
+[06/15/2025-03:39:07] [I]        4.23       0.0174       0.0119       0.1   model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv1/conv_bn_fused/Conv || model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        2.33       0.0096       0.0062       0.1   PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]       11.90       0.0490       0.0242       0.4   model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        5.13       0.0211       0.0184       0.2   model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        1.87       0.0077       0.0061       0.1   PWN(PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv2/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/conv2/act/Mul)), PWN(model1_/model/encoder/fpn_blocks.0/cv2/cv2.0/Add)))
+[06/15/2025-03:39:07] [I]       10.74       0.0442       0.0243       0.3   model1_/model/encoder/fpn_blocks.0/cv2/cv2.1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv2/cv2.1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv2/cv2.1/act/Mul))
+[06/15/2025-03:39:07] [I]        3.33       0.0137       0.0114       0.1   model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv1/conv_bn_fused/Conv || model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        2.02       0.0083       0.0061       0.1   PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        9.11       0.0375       0.0239       0.3   model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]       13.12       0.0540       0.0187       0.4   model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        5.35       0.0220       0.0062       0.2   PWN(PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv2/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/conv2/act/Mul)), PWN(model1_/model/encoder/fpn_blocks.0/cv3/cv3.0/Add)))
+[06/15/2025-03:39:07] [I]       11.87       0.0488       0.0234       0.4   model1_/model/encoder/fpn_blocks.0/cv3/cv3.1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv3/cv3.1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv3/cv3.1/act/Mul))
+[06/15/2025-03:39:07] [I]        2.96       0.0122       0.0111       0.1   model1_/model/encoder/fpn_blocks.0/Split_output_0 copy
+[06/15/2025-03:39:07] [I]        3.23       0.0133       0.0119       0.1   model1_/model/encoder/fpn_blocks.0/Split_output_1 copy
+[06/15/2025-03:39:07] [I]        8.09       0.0333       0.0251       0.2   model1_/model/encoder/fpn_blocks.0/cv4/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.0/cv4/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.0/cv4/act/Mul))
+[06/15/2025-03:39:07] [I]        3.41       0.0140       0.0135       0.1   model1_/model/encoder/lateral_convs.1/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        2.17       0.0089       0.0082       0.1   model1_/model/encoder/Resize_1
+[06/15/2025-03:39:07] [I]        7.24       0.0298       0.0293       0.2   model1_/model/encoder/input_proj.0/conv/Conv
+[06/15/2025-03:39:07] [I]        5.68       0.0234       0.0204       0.2   model1_/model/encoder/Resize_1_output_0 copy
+[06/15/2025-03:39:07] [I]       12.34       0.0508       0.0508       0.4   model1_/model/encoder/fpn_blocks.1/cv1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv1/act/Mul))
+[06/15/2025-03:39:07] [I]        4.49       0.0185       0.0184       0.1   model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        8.86       0.0364       0.0363       0.3   model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        7.05       0.0290       0.0196       0.2   model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]       11.38       0.0468       0.0460       0.4   model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/conv/Conv + PWN(PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv2/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/conv2/act/Mul)), PWN(model1_/model/encoder/fpn_blocks.1/cv2/cv2.0/Add)))
+[06/15/2025-03:39:07] [I]       11.05       0.0455       0.0359       0.3   model1_/model/encoder/fpn_blocks.1/cv2/cv2.1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv2/cv2.1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv2/cv2.1/act/Mul))
+[06/15/2025-03:39:07] [I]        3.83       0.0158       0.0162       0.1   model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        8.77       0.0361       0.0359       0.3   model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        5.38       0.0222       0.0129       0.2   model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]       11.86       0.0488       0.0464       0.4   model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/conv/Conv + PWN(PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv2/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/conv2/act/Mul)), PWN(model1_/model/encoder/fpn_blocks.1/cv3/cv3.0/Add)))
+[06/15/2025-03:39:07] [I]       11.49       0.0473       0.0372       0.4   model1_/model/encoder/fpn_blocks.1/cv3/cv3.1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv3/cv3.1/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv3/cv3.1/act/Mul))
+[06/15/2025-03:39:07] [I]        6.44       0.0265       0.0266       0.2   model1_/model/encoder/fpn_blocks.1/Split_output_0 copy
+[06/15/2025-03:39:07] [I]        6.46       0.0266       0.0266       0.2   model1_/model/encoder/fpn_blocks.1/Split_output_1 copy
+[06/15/2025-03:39:07] [I]       11.91       0.0490       0.0492       0.4   model1_/model/encoder/fpn_blocks.1/cv4/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/fpn_blocks.1/cv4/act/Sigmoid), PWN(model1_/model/encoder/fpn_blocks.1/cv4/act/Mul))
+[06/15/2025-03:39:07] [I]        5.78       0.0238       0.0234       0.2   model1_/model/encoder/downsample_convs.0/downsample_convs.0.0/cv1/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        2.90       0.0119       0.0121       0.1   model1_/model/encoder/downsample_convs.0/downsample_convs.0.0/cv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        2.92       0.0120       0.0120       0.1   model1_/model/encoder/lateral_convs.1/conv_bn_fused/Conv_output_0 copy
+[06/15/2025-03:39:07] [I]        5.63       0.0232       0.0232       0.2   model1_/model/encoder/pan_blocks.0/cv1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/pan_blocks.0/cv1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv1/act/Mul))
+[06/15/2025-03:39:07] [I]        3.38       0.0139       0.0140       0.1   model1_/model/encoder/pan_blocks.0/cv2/cv2.0/conv1/conv_bn_fused/Conv || model1_/model/encoder/pan_blocks.0/cv2/cv2.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        4.52       0.0186       0.0077       0.1   PWN(PWN(model1_/model/encoder/pan_blocks.0/cv2/cv2.0/conv1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv2/cv2.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        6.29       0.0259       0.0266       0.2   model1_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model1_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        4.60       0.0189       0.0187       0.1   model1_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        3.54       0.0146       0.0069       0.1   PWN(PWN(PWN(model1_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model1_/model/encoder/pan_blocks.0/cv2/cv2.0/conv2/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv2/cv2.0/conv2/act/Mul)), PWN(model1_/model/encoder/pan_blocks.0/cv2/cv2.0/Add)))
+[06/15/2025-03:39:07] [I]        8.70       0.0358       0.0246       0.3   model1_/model/encoder/pan_blocks.0/cv2/cv2.1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/pan_blocks.0/cv2/cv2.1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv2/cv2.1/act/Mul))
+[06/15/2025-03:39:07] [I]        3.30       0.0136       0.0122       0.1   model1_/model/encoder/pan_blocks.0/cv3/cv3.0/conv1/conv_bn_fused/Conv || model1_/model/encoder/pan_blocks.0/cv3/cv3.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        1.93       0.0080       0.0064       0.1   PWN(PWN(model1_/model/encoder/pan_blocks.0/cv3/cv3.0/conv1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv3/cv3.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        8.08       0.0333       0.0244       0.2   model1_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model1_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        5.17       0.0213       0.0185       0.2   model1_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        1.67       0.0069       0.0068       0.1   PWN(PWN(PWN(model1_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model1_/model/encoder/pan_blocks.0/cv3/cv3.0/conv2/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv3/cv3.0/conv2/act/Mul)), PWN(model1_/model/encoder/pan_blocks.0/cv3/cv3.0/Add)))
+[06/15/2025-03:39:07] [I]        7.42       0.0305       0.0246       0.2   model1_/model/encoder/pan_blocks.0/cv3/cv3.1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/pan_blocks.0/cv3/cv3.1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv3/cv3.1/act/Mul))
+[06/15/2025-03:39:07] [I]        3.18       0.0131       0.0117       0.1   model1_/model/encoder/pan_blocks.0/Split_output_0 copy
+[06/15/2025-03:39:07] [I]       12.16       0.0500       0.0123       0.4   model1_/model/encoder/pan_blocks.0/Split_output_1 copy
+[06/15/2025-03:39:07] [I]        6.21       0.0256       0.0252       0.2   model1_/model/encoder/pan_blocks.0/cv4/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/pan_blocks.0/cv4/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.0/cv4/act/Mul))
+[06/15/2025-03:39:07] [I]        3.09       0.0127       0.0124       0.1   model1_/model/encoder/downsample_convs.1/downsample_convs.1.0/cv1/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        1.98       0.0082       0.0079       0.1   model1_/model/encoder/downsample_convs.1/downsample_convs.1.0/cv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        2.11       0.0087       0.0083       0.1   model1_/model/encoder/lateral_convs.0/conv_bn_fused/Conv_output_0 copy
+[06/15/2025-03:39:07] [I]        8.34       0.0343       0.0186       0.3   model1_/model/encoder/pan_blocks.1/cv1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/pan_blocks.1/cv1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.1/cv1/act/Mul))
+[06/15/2025-03:39:07] [I]        2.54       0.0105       0.0101       0.1   model1_/model/encoder/pan_blocks.1/cv2/cv2.0/conv1/conv_bn_fused/Conv || model1_/model/encoder/pan_blocks.1/cv2/cv2.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        1.71       0.0071       0.0061       0.1   PWN(PWN(model1_/model/encoder/pan_blocks.1/cv2/cv2.0/conv1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.1/cv2/cv2.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        5.39       0.0222       0.0188       0.2   model1_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model1_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        3.79       0.0156       0.0156       0.1   model1_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        2.12       0.0087       0.0082       0.1   PWN(PWN(PWN(model1_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.1/cv2/cv2.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model1_/model/encoder/pan_blocks.1/cv2/cv2.0/conv2/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.1/cv2/cv2.0/conv2/act/Mul)), PWN(model1_/model/encoder/pan_blocks.1/cv2/cv2.0/Add)))
+[06/15/2025-03:39:07] [I]        5.45       0.0224       0.0192       0.2   model1_/model/encoder/pan_blocks.1/cv2/cv2.1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/pan_blocks.1/cv2/cv2.1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.1/cv2/cv2.1/act/Mul))
+[06/15/2025-03:39:07] [I]        2.30       0.0095       0.0090       0.1   model1_/model/encoder/pan_blocks.1/cv3/cv3.0/conv1/conv_bn_fused/Conv || model1_/model/encoder/pan_blocks.1/cv3/cv3.0/conv2/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        1.51       0.0062       0.0061       0.0   PWN(PWN(model1_/model/encoder/pan_blocks.1/cv3/cv3.0/conv1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.1/cv3/cv3.0/conv1/act/Mul))
+[06/15/2025-03:39:07] [I]        5.29       0.0218       0.0205       0.2   model1_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/conv/Conv + PWN(PWN(model1_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.0/act/Mul))
+[06/15/2025-03:39:07] [I]        4.53       0.0186       0.0159       0.1   model1_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/conv/Conv
+[06/15/2025-03:39:07] [I]        1.68       0.0069       0.0066       0.1   PWN(PWN(PWN(model1_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.1/cv3/cv3.0/bottlenecks/bottlenecks.1/act/Mul)), PWN(PWN(PWN(model1_/model/encoder/pan_blocks.1/cv3/cv3.0/conv2/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.1/cv3/cv3.0/conv2/act/Mul)), PWN(model1_/model/encoder/pan_blocks.1/cv3/cv3.0/Add)))
+[06/15/2025-03:39:07] [I]        5.05       0.0208       0.0194       0.2   model1_/model/encoder/pan_blocks.1/cv3/cv3.1/conv_bn_fused/Conv + PWN(PWN(model1_/model/encoder/pan_blocks.1/cv3/cv3.1/act/Sigmoid), PWN(model1_/model/encoder/pan_blocks.1/cv3/cv3.1/act/Mul))
+[06/15/2025-03:39:07] [I]        1.75       0.0072       0.0067       0.1   model1_/model/encoder/pan_blocks.1/Split_output_0 copy
+[06/15/2025-03:39:07] [I]        2.50       0.0103       0.0084       0.1   model1_/model/encoder/pan_blocks.1/Split_output_1 copy
+[06/15/2025-03:39:07] [I]        4.53       0.0187       0.0143       0.1   model1_/model/encoder/pan_blocks.1/cv4/conv_bn_fused/Conv
+[06/15/2025-03:39:07] [I]        5.81       0.0239       0.0184       0.2   Reformatting CopyNode for Input Tensor 0 to {ForeignNode[model1_onnx::MatMul_3616 + ONNXTRT_Broadcast_227...model1_/model/decoder/decoder/lqe_layers.3/TopK]}
+[06/15/2025-03:39:07] [I]        3.06       0.0126       0.0107       0.1   Reformatting CopyNode for Input Tensor 1 to {ForeignNode[model1_onnx::MatMul_3616 + ONNXTRT_Broadcast_227...model1_/model/decoder/decoder/lqe_layers.3/TopK]}
+[06/15/2025-03:39:07] [I]        2.22       0.0091       0.0085       0.1   Reformatting CopyNode for Input Tensor 2 to {ForeignNode[model1_onnx::MatMul_3616 + ONNXTRT_Broadcast_227...model1_/model/decoder/decoder/lqe_layers.3/TopK]}
+[06/15/2025-03:39:07] [I]       10.22       0.0420       0.0195       0.3   Reformatting CopyNode for Input Tensor 3 to {ForeignNode[model1_onnx::MatMul_3616 + ONNXTRT_Broadcast_227...model1_/model/decoder/decoder/lqe_layers.3/TopK]}
+[06/15/2025-03:39:07] [I]        2.84       0.0117       0.0110       0.1   Reformatting CopyNode for Input Tensor 4 to {ForeignNode[model1_onnx::MatMul_3616 + ONNXTRT_Broadcast_227...model1_/model/decoder/decoder/lqe_layers.3/TopK]}
+[06/15/2025-03:39:07] [I]        1.86       0.0077       0.0068       0.1   Reformatting CopyNode for Input Tensor 5 to {ForeignNode[model1_onnx::MatMul_3616 + ONNXTRT_Broadcast_227...model1_/model/decoder/decoder/lqe_layers.3/TopK]}
+[06/15/2025-03:39:07] [I]        0.59       0.0024       0.0020       0.0   dummy_shape_call__mye340319_0_myl351_0
+[06/15/2025-03:39:07] [I]        4.28       0.0176       0.0164       0.1   __myl_Tra_myl351_4
+[06/15/2025-03:39:07] [I]        2.10       0.0086       0.0082       0.1   __myl_Tra_myl351_6
+[06/15/2025-03:39:07] [I]       16.00       0.0658       0.0523       0.5   __myl_MovNegExpAddDivMulResTraConMulResTraSliResSliSliTraCas_myl351_10
+[06/15/2025-03:39:07] [I]        6.55       0.0270       0.0263       0.2   model2_/model/decoder/enc_output/proj/MatMul_myl351_11
+[06/15/2025-03:39:07] [I]        7.31       0.0301       0.0182       0.2   __myl_CasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_12
+[06/15/2025-03:39:07] [I]        5.66       0.0233       0.0184       0.2   model2_/model/decoder/enc_score_head/MatMul_myl351_13
+[06/15/2025-03:39:07] [I]        4.22       0.0174       0.0065       0.1   __myl_Max_myl351_14
+[06/15/2025-03:39:07] [I]       10.18       0.0419       0.0319       0.3   __myl_Top_myl351_15
+[06/15/2025-03:39:07] [I]        2.41       0.0099       0.0063       0.1   __myl_CasResCasRepGat_myl351_16
+[06/15/2025-03:39:07] [I]        6.86       0.0282       0.0188       0.2   __myl_Tra_myl351_18
+[06/15/2025-03:39:07] [I]        4.32       0.0178       0.0140       0.1   __myl_Tra_myl351_20
+[06/15/2025-03:39:07] [I]       16.89       0.0695       0.0564       0.5   __myl_MovNegExpAddDivMulResTraConMulResTraSliResSliSliTraCas_myl351_22
+[06/15/2025-03:39:07] [I]       10.21       0.0420       0.0308       0.3   model1_/model/decoder/enc_output/proj/MatMul_myl351_23
+[06/15/2025-03:39:07] [I]        7.15       0.0294       0.0187       0.2   __myl_CasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_24
+[06/15/2025-03:39:07] [I]       10.20       0.0420       0.0227       0.3   model1_/model/decoder/enc_score_head/MatMul_myl351_25
+[06/15/2025-03:39:07] [I]        2.51       0.0103       0.0093       0.1   __myl_Max_myl351_26
+[06/15/2025-03:39:07] [I]        8.86       0.0365       0.0344       0.3   __myl_Top_myl351_27
+[06/15/2025-03:39:07] [I]        2.61       0.0108       0.0111       0.1   __myl_CasResCasRepGat_myl351_28
+[06/15/2025-03:39:07] [I]       10.13       0.0417       0.0282       0.3   model2_/model/decoder/decoder/layers_0/self_attn/MatMul_2_myl351_31
+[06/15/2025-03:39:07] [I]        5.98       0.0246       0.0215       0.2   model1_/model/decoder/decoder/layers_0/self_attn/MatMul_2_myl351_34
+[06/15/2025-03:39:07] [I]        4.32       0.0178       0.0158       0.1   model2_/model/decoder/enc_bbox_head/layers_0/MatMul_myl351_36
+[06/15/2025-03:39:07] [I]       14.02       0.0577       0.0471       0.4   model2_/model/decoder/enc_bbox_head/layers_1/MatMul_myl351_37
+[06/15/2025-03:39:07] [I]        7.95       0.0327       0.0204       0.2   model2_/model/decoder/enc_bbox_head/layers_2/MatMul_myl351_38
+[06/15/2025-03:39:07] [I]        2.94       0.0121       0.0102       0.1   __myl_RepGatAddNegExpAddDiv_myl351_39
+[06/15/2025-03:39:07] [I]        9.27       0.0382       0.0188       0.3   model2_/model/decoder/decoder/query_pos_head/layers_0/MatMul_myl351_40
+[06/15/2025-03:39:07] [I]        3.07       0.0126       0.0113       0.1   __myl_Rel_myl351_41
+[06/15/2025-03:39:07] [I]        7.38       0.0304       0.0184       0.2   model2_/model/decoder/decoder/query_pos_head/layers_1/MatMul_myl351_42
+[06/15/2025-03:39:07] [I]        2.61       0.0108       0.0082       0.1   __myl_MaxMinAdd_myl351_43
+[06/15/2025-03:39:07] [I]        5.12       0.0210       0.0185       0.2   model1_/model/decoder/enc_bbox_head/layers_0/MatMul_myl351_44
+[06/15/2025-03:39:07] [I]        4.40       0.0181       0.0144       0.1   model1_/model/decoder/enc_bbox_head/layers_1/MatMul_myl351_45
+[06/15/2025-03:39:07] [I]        3.89       0.0160       0.0107       0.1   model1_/model/decoder/enc_bbox_head/layers_2/MatMul_myl351_46
+[06/15/2025-03:39:07] [I]        7.06       0.0291       0.0123       0.2   __myl_RepGatAddNegExpAddDiv_myl351_47
+[06/15/2025-03:39:07] [I]       12.22       0.0503       0.0582       0.4   model1_/model/decoder/decoder/query_pos_head/layers_0/MatMul_myl351_48
+[06/15/2025-03:39:07] [I]        4.06       0.0167       0.0081       0.1   __myl_Rel_myl351_49
+[06/15/2025-03:39:07] [I]       10.77       0.0443       0.0205       0.3   model1_/model/decoder/decoder/query_pos_head/layers_1/MatMul_myl351_50
+[06/15/2025-03:39:07] [I]        4.19       0.0172       0.0123       0.1   __myl_MaxMinAdd_myl351_51
+[06/15/2025-03:39:07] [I]        3.66       0.0150       0.0140       0.1   model2_/model/decoder/decoder/layers_0/self_attn/MatMul_1+model2_/model/decoder/decoder/layers_0/self_attn/MatMul_myl351_52
+[06/15/2025-03:39:07] [I]        9.74       0.0401       0.0153       0.3   model1_/model/decoder/decoder/layers_0/self_attn/MatMul_1+model1_/model/decoder/decoder/layers_0/self_attn/MatMul_myl351_53
+[06/15/2025-03:39:07] [I]        3.92       0.0161       0.0142       0.1   _gemm_mha_v2_myl351_55
+[06/15/2025-03:39:07] [I]        2.79       0.0115       0.0086       0.1   __myl_Tra_myl351_56
+[06/15/2025-03:39:07] [I]        5.18       0.0213       0.0145       0.2   _gemm_mha_v2_myl351_58
+[06/15/2025-03:39:07] [I]        5.03       0.0207       0.0102       0.2   __myl_Tra_myl351_59
+[06/15/2025-03:39:07] [I]        4.62       0.0190       0.0164       0.1   model2_/model/decoder/decoder/layers_0/self_attn/Gemm_myl351_60
+[06/15/2025-03:39:07] [I]        4.89       0.0201       0.0143       0.2   model1_/model/decoder/decoder/layers_0/self_attn/Gemm_myl351_61
+[06/15/2025-03:39:07] [I]        3.48       0.0143       0.0135       0.1   __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_62
+[06/15/2025-03:39:07] [I]        8.50       0.0350       0.0143       0.3   model2_/model/decoder/decoder/layers_0/cross_attn/attention_weights/MatMul+model2_/model/decoder/decoder/layers_0/cross_attn/sampling_offsets/MatMul_myl351_63
+[06/15/2025-03:39:07] [I]        4.24       0.0175       0.0102       0.1   __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_65
+[06/15/2025-03:39:07] [I]        4.87       0.0201       0.0143       0.2   model1_/model/decoder/decoder/layers_0/cross_attn/attention_weights/MatMul+model1_/model/decoder/decoder/layers_0/cross_attn/sampling_offsets/MatMul_myl351_66
+[06/15/2025-03:39:07] [I]       12.56       0.0517       0.0512       0.4   __myl_ResMaxSubExpSum_myl351_69
+[06/15/2025-03:39:07] [I]       16.18       0.0666       0.0590       0.5   __myl_ResSliSliResMulMulMulAddMulAddTraResSliSliSliResResCasRevTraCasAddMulAddMulFloCasSubSubAddEtc_myl351_71
+[06/15/2025-03:39:07] [I]        9.79       0.0403       0.0184       0.3   __myl_DivMulTraResConMulSum_myl351_73
+[06/15/2025-03:39:07] [I]       16.78       0.0690       0.0485       0.5   __myl_ResMaxSubExpSum_myl351_75
+[06/15/2025-03:39:07] [I]       19.61       0.0807       0.0562       0.6   __myl_ResSliSliResMulMulMulAddMulAddTraResSliSliSliResResCasRevTraCasAddMulAddMulFloCasSubSubAddEtc_myl351_77
+[06/15/2025-03:39:07] [I]        9.06       0.0373       0.0211       0.3   __myl_DivMulTraResConMulSum_myl351_79
+[06/15/2025-03:39:07] [I]        4.41       0.0181       0.0132       0.1   __myl_TraCon_myl351_80
+[06/15/2025-03:39:07] [I]        7.52       0.0310       0.0189       0.2   __myl_FcNegExpAddDiv_myl351_81
+[06/15/2025-03:39:07] [I]        2.86       0.0118       0.0094       0.1   __myl_SliMulSliMulAddCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_82
+[06/15/2025-03:39:07] [I]        8.34       0.0343       0.0161       0.3   model2_/model/decoder/decoder/layers_0/linear1/MatMul_myl351_83
+[06/15/2025-03:39:07] [I]       10.90       0.0448       0.0249       0.3   model2_/model/decoder/decoder/layers_0/linear2/MatMul_myl351_84
+[06/15/2025-03:39:07] [I]        3.26       0.0134       0.0121       0.1   __myl_AddMaxMinCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_85
+[06/15/2025-03:39:07] [I]        7.27       0.0299       0.0132       0.2   __myl_TraCon_myl351_87
+[06/15/2025-03:39:07] [I]        6.79       0.0280       0.0169       0.2   __myl_FcNegExpAddDiv_myl351_88
+[06/15/2025-03:39:07] [I]        3.43       0.0141       0.0078       0.1   __myl_SliMulSliMulAddCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_89
+[06/15/2025-03:39:07] [I]        8.17       0.0336       0.0166       0.3   model1_/model/decoder/decoder/layers_0/linear1/MatMul_myl351_90
+[06/15/2025-03:39:07] [I]        8.22       0.0338       0.0228       0.3   model1_/model/decoder/decoder/layers_0/linear2/MatMul_myl351_91
+[06/15/2025-03:39:07] [I]        3.09       0.0127       0.0104       0.1   __myl_AddMaxMinCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_92
+[06/15/2025-03:39:07] [I]       10.82       0.0445       0.0223       0.3   model2_/model/decoder/decoder/layers_1/self_attn/MatMul_2_myl351_95
+[06/15/2025-03:39:07] [I]        8.30       0.0342       0.0167       0.3   model2_/model/decoder/decoder/dec_bbox_head_0/layers_0/MatMul+model2_/model/decoder/decoder/pre_bbox_head/layers_0/MatMul_myl351_97
+[06/15/2025-03:39:07] [I]        7.40       0.0305       0.0165       0.2   model1_/model/decoder/decoder/layers_1/self_attn/MatMul_2_myl351_100
+[06/15/2025-03:39:07] [I]        5.16       0.0212       0.0222       0.2   model1_/model/decoder/decoder/dec_bbox_head_0/layers_0/MatMul+model1_/model/decoder/decoder/pre_bbox_head/layers_0/MatMul_myl351_102
+[06/15/2025-03:39:07] [I]        6.12       0.0252       0.0132       0.2   __myl_Mov_myl351_104
+[06/15/2025-03:39:07] [I]       13.05       0.0537       0.0292       0.4   model2_/model/decoder/decoder/dec_bbox_head_0/layers_1/MatMul_myl351_105
+[06/15/2025-03:39:07] [I]        7.46       0.0307       0.0117       0.2   model2_/model/decoder/decoder/dec_bbox_head_0/layers_2/MatMul_myl351_106
+[06/15/2025-03:39:07] [I]        6.47       0.0266       0.0164       0.2   __myl_Mov_myl351_107
+[06/15/2025-03:39:07] [I]        4.86       0.0200       0.0168       0.1   model1_/model/decoder/decoder/dec_bbox_head_0/layers_1/MatMul_myl351_108
+[06/15/2025-03:39:07] [I]        9.52       0.0392       0.0328       0.3   model1_/model/decoder/decoder/dec_bbox_head_0/layers_2/MatMul_myl351_109
+[06/15/2025-03:39:07] [I]        2.96       0.0122       0.0075       0.1   __myl_MaxSubExpSumDivMul_myl351_110
+[06/15/2025-03:39:07] [I]        3.64       0.0150       0.0078       0.1   model2_/model/decoder/decoder/integral/MatMul_myl351_111
+[06/15/2025-03:39:07] [I]        3.73       0.0153       0.0123       0.1   __myl_MaxSubExpSumDivMul_myl351_112
+[06/15/2025-03:39:07] [I]        4.92       0.0202       0.0102       0.2   model1_/model/decoder/decoder/integral/MatMul_myl351_113
+[06/15/2025-03:39:07] [I]        5.28       0.0217       0.0148       0.2   __myl_Mov_myl351_115
+[06/15/2025-03:39:07] [I]        5.17       0.0213       0.0165       0.2   model2_/model/decoder/decoder/pre_bbox_head/layers_1/MatMul_myl351_118
+[06/15/2025-03:39:07] [I]        7.20       0.0296       0.0116       0.2   model2_/model/decoder/decoder/pre_bbox_head/layers_2/MatMul_myl351_119
+[06/15/2025-03:39:07] [I]        4.86       0.0200       0.0143       0.1   __myl_MaxMinMaxSubMinMaxMinDivLogAddNegExpAddDivSliResSliResSliResSliResSliResSliResSliResSliResEtc_myl351_122
+[06/15/2025-03:39:07] [I]        3.37       0.0139       0.0082       0.1   model2_/model/decoder/decoder/query_pos_head/layers_0_1/MatMul_myl351_123
+[06/15/2025-03:39:07] [I]        1.92       0.0079       0.0060       0.1   __myl_Rel_myl351_124
+[06/15/2025-03:39:07] [I]        5.08       0.0209       0.0123       0.2   model2_/model/decoder/decoder/query_pos_head/layers_1_1/MatMul_myl351_125
+[06/15/2025-03:39:07] [I]        1.99       0.0082       0.0067       0.1   __myl_MaxMinAdd_myl351_126
+[06/15/2025-03:39:07] [I]        4.80       0.0198       0.0184       0.1   __myl_Mov_myl351_128
+[06/15/2025-03:39:07] [I]        8.18       0.0337       0.0199       0.3   model1_/model/decoder/decoder/pre_bbox_head/layers_1/MatMul_myl351_129
+[06/15/2025-03:39:07] [I]        6.96       0.0286       0.0184       0.2   model1_/model/decoder/decoder/pre_bbox_head/layers_2/MatMul_myl351_130
+[06/15/2025-03:39:07] [I]        4.14       0.0170       0.0133       0.1   __myl_MaxMinMaxSubMinMaxMinDivLogAddNegExpAddDivSliResSliResSliResSliResSliResSliResSliResSliResEtc_myl351_133
+[06/15/2025-03:39:07] [I]        4.23       0.0174       0.0108       0.1   model1_/model/decoder/decoder/query_pos_head/layers_0_1/MatMul_myl351_134
+[06/15/2025-03:39:07] [I]        2.94       0.0121       0.0094       0.1   __myl_Rel_myl351_135
+[06/15/2025-03:39:07] [I]        6.88       0.0283       0.0164       0.2   model1_/model/decoder/decoder/query_pos_head/layers_1_1/MatMul_myl351_136
+[06/15/2025-03:39:07] [I]        2.31       0.0095       0.0095       0.1   __myl_MaxMinAdd_myl351_137
+[06/15/2025-03:39:07] [I]        3.49       0.0143       0.0119       0.1   model2_/model/decoder/decoder/layers_1/self_attn/MatMul_1+model2_/model/decoder/decoder/layers_1/self_attn/MatMul_myl351_138
+[06/15/2025-03:39:07] [I]        4.98       0.0205       0.0135       0.2   model1_/model/decoder/decoder/layers_1/self_attn/MatMul_1+model1_/model/decoder/decoder/layers_1/self_attn/MatMul_myl351_139
+[06/15/2025-03:39:07] [I]        4.44       0.0183       0.0129       0.1   _gemm_mha_v2_myl351_141
+[06/15/2025-03:39:07] [I]        2.12       0.0087       0.0080       0.1   __myl_Tra_myl351_142
+[06/15/2025-03:39:07] [I]        3.06       0.0126       0.0123       0.1   _gemm_mha_v2_myl351_144
+[06/15/2025-03:39:07] [I]        2.04       0.0084       0.0082       0.1   __myl_Tra_myl351_145
+[06/15/2025-03:39:07] [I]        3.53       0.0145       0.0106       0.1   model2_/model/decoder/decoder/layers_1/self_attn/Gemm_myl351_146
+[06/15/2025-03:39:07] [I]        3.16       0.0130       0.0123       0.1   model1_/model/decoder/decoder/layers_1/self_attn/Gemm_myl351_147
+[06/15/2025-03:39:07] [I]        4.22       0.0174       0.0076       0.1   __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_148
+[06/15/2025-03:39:07] [I]        2.84       0.0117       0.0102       0.1   model2_/model/decoder/decoder/layers_1/cross_attn/attention_weights/MatMul+model2_/model/decoder/decoder/layers_1/cross_attn/sampling_offsets/MatMul_myl351_149
+[06/15/2025-03:39:07] [I]        2.81       0.0116       0.0092       0.1   __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_151
+[06/15/2025-03:39:07] [I]        3.66       0.0151       0.0101       0.1   model1_/model/decoder/decoder/layers_1/cross_attn/attention_weights/MatMul+model1_/model/decoder/decoder/layers_1/cross_attn/sampling_offsets/MatMul_myl351_152
+[06/15/2025-03:39:07] [I]        6.77       0.0278       0.0116       0.2   __myl_ResMaxSubExpSum_myl351_155
+[06/15/2025-03:39:07] [I]       16.27       0.0669       0.0584       0.5   __myl_ResMulMulMulAddMulAddTraResSliCasRevAddMulAddMulFloCasSubSubAddMaxMinGatLteLteAndCasSliSliEtc_myl351_157
+[06/15/2025-03:39:07] [I]        4.52       0.0186       0.0136       0.1   __myl_DivMulTraResConMulSum_myl351_159
+[06/15/2025-03:39:07] [I]       12.79       0.0526       0.0532       0.4   __myl_ResMaxSubExpSum_myl351_161
+[06/15/2025-03:39:07] [I]       15.72       0.0647       0.0604       0.5   __myl_ResMulMulMulAddMulAddTraResSliCasRevAddMulAddMulFloCasSubSubAddMaxMinGatLteLteAndCasSliSliEtc_myl351_163
+[06/15/2025-03:39:07] [I]        3.89       0.0160       0.0154       0.1   __myl_DivMulTraResConMulSum_myl351_165
+[06/15/2025-03:39:07] [I]        3.85       0.0159       0.0108       0.1   __myl_TraCon_myl351_166
+[06/15/2025-03:39:07] [I]        4.46       0.0184       0.0146       0.1   __myl_FcNegExpAddDiv_myl351_167
+[06/15/2025-03:39:07] [I]        4.18       0.0172       0.0072       0.1   __myl_SliMulSliMulAddCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_168
+[06/15/2025-03:39:07] [I]        5.84       0.0240       0.0123       0.2   model2_/model/decoder/decoder/layers_1/linear1/MatMul_myl351_169
+[06/15/2025-03:39:07] [I]        5.83       0.0240       0.0222       0.2   model2_/model/decoder/decoder/layers_1/linear2/MatMul_myl351_170
+[06/15/2025-03:39:07] [I]        2.22       0.0091       0.0080       0.1   __myl_AddMaxMinCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_171
+[06/15/2025-03:39:07] [I]        4.81       0.0198       0.0102       0.1   __myl_TraCon_myl351_173
+[06/15/2025-03:39:07] [I]        7.94       0.0327       0.0204       0.2   __myl_FcNegExpAddDiv_myl351_174
+[06/15/2025-03:39:07] [I]        2.18       0.0090       0.0085       0.1   __myl_SliMulSliMulAddCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_175
+[06/15/2025-03:39:07] [I]        4.52       0.0186       0.0143       0.1   model1_/model/decoder/decoder/layers_1/linear1/MatMul_myl351_176
+[06/15/2025-03:39:07] [I]        7.76       0.0319       0.0266       0.2   model1_/model/decoder/decoder/layers_1/linear2/MatMul_myl351_177
+[06/15/2025-03:39:07] [I]        6.94       0.0286       0.0102       0.2   __myl_AddMaxMinCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_178
+[06/15/2025-03:39:07] [I]        5.51       0.0227       0.0180       0.2   model2_/model/decoder/decoder/layers_2/self_attn/MatMul_2_myl351_181
+[06/15/2025-03:39:07] [I]        8.41       0.0346       0.0184       0.3   model1_/model/decoder/decoder/layers_2/self_attn/MatMul_2_myl351_184
+[06/15/2025-03:39:07] [I]        3.06       0.0126       0.0107       0.1   model2_/model/decoder/decoder/dec_bbox_head_1/layers_0/MatMul_myl351_186
+[06/15/2025-03:39:07] [I]        3.39       0.0139       0.0106       0.1   model2_/model/decoder/decoder/dec_bbox_head_1/layers_1/MatMul_myl351_187
+[06/15/2025-03:39:07] [I]        3.63       0.0149       0.0102       0.1   model2_/model/decoder/decoder/dec_bbox_head_1/layers_2/MatMul_myl351_188
+[06/15/2025-03:39:07] [I]        7.28       0.0299       0.0122       0.2   __myl_AddResMaxSubExpSumDivMul_myl351_189
+[06/15/2025-03:39:07] [I]        3.88       0.0160       0.0094       0.1   model2_/model/decoder/decoder/integral_1/MatMul_myl351_190
+[06/15/2025-03:39:07] [I]        7.15       0.0294       0.0142       0.2   model1_/model/decoder/decoder/dec_bbox_head_1/layers_0/MatMul_myl351_191
+[06/15/2025-03:39:07] [I]        4.89       0.0201       0.0132       0.2   model1_/model/decoder/decoder/dec_bbox_head_1/layers_1/MatMul_myl351_192
+[06/15/2025-03:39:07] [I]       11.67       0.0480       0.0129       0.4   model1_/model/decoder/decoder/dec_bbox_head_1/layers_2/MatMul_myl351_193
+[06/15/2025-03:39:07] [I]        5.09       0.0209       0.0102       0.2   __myl_AddResMaxSubExpSumDivMul_myl351_194
+[06/15/2025-03:39:07] [I]        4.92       0.0202       0.0080       0.2   model1_/model/decoder/decoder/integral_1/MatMul_myl351_195
+[06/15/2025-03:39:07] [I]        2.71       0.0112       0.0080       0.1   __myl_SliResSliResSliResSliResAddMulAddResAddMulAddResAddMulSubResAddMulSubResConSliResSliResSliEtc_myl351_196
+[06/15/2025-03:39:07] [I]        6.95       0.0286       0.0146       0.2   model2_/model/decoder/decoder/query_pos_head/layers_0_2/MatMul_myl351_197
+[06/15/2025-03:39:07] [I]        3.67       0.0151       0.0095       0.1   __myl_Rel_myl351_198
+[06/15/2025-03:39:07] [I]        5.17       0.0213       0.0143       0.2   model2_/model/decoder/decoder/query_pos_head/layers_1_2/MatMul_myl351_199
+[06/15/2025-03:39:07] [I]        4.29       0.0177       0.0082       0.1   __myl_MaxMinAdd_myl351_200
+[06/15/2025-03:39:07] [I]        5.88       0.0242       0.0082       0.2   __myl_SliResSliResSliResSliResAddMulAddResAddMulAddResAddMulSubResAddMulSubResConSliResSliResSliEtc_myl351_201
+[06/15/2025-03:39:07] [I]        4.47       0.0184       0.0118       0.1   model1_/model/decoder/decoder/query_pos_head/layers_0_2/MatMul_myl351_202
+[06/15/2025-03:39:07] [I]        2.59       0.0106       0.0090       0.1   __myl_Rel_myl351_203
+[06/15/2025-03:39:07] [I]        3.79       0.0156       0.0141       0.1   model1_/model/decoder/decoder/query_pos_head/layers_1_2/MatMul_myl351_204
+[06/15/2025-03:39:07] [I]        2.15       0.0088       0.0082       0.1   __myl_MaxMinAdd_myl351_205
+[06/15/2025-03:39:07] [I]        4.04       0.0166       0.0124       0.1   model2_/model/decoder/decoder/layers_2/self_attn/MatMul_1+model2_/model/decoder/decoder/layers_2/self_attn/MatMul_myl351_206
+[06/15/2025-03:39:07] [I]        3.43       0.0141       0.0120       0.1   model1_/model/decoder/decoder/layers_2/self_attn/MatMul_1+model1_/model/decoder/decoder/layers_2/self_attn/MatMul_myl351_207
+[06/15/2025-03:39:07] [I]        3.09       0.0127       0.0117       0.1   _gemm_mha_v2_myl351_209
+[06/15/2025-03:39:07] [I]        2.38       0.0098       0.0080       0.1   __myl_Tra_myl351_210
+[06/15/2025-03:39:07] [I]        3.70       0.0152       0.0121       0.1   _gemm_mha_v2_myl351_212
+[06/15/2025-03:39:07] [I]        2.53       0.0104       0.0075       0.1   __myl_Tra_myl351_213
+[06/15/2025-03:39:07] [I]        6.32       0.0260       0.0104       0.2   model2_/model/decoder/decoder/layers_2/self_attn/Gemm_myl351_214
+[06/15/2025-03:39:07] [I]        4.08       0.0168       0.0114       0.1   model1_/model/decoder/decoder/layers_2/self_attn/Gemm_myl351_215
+[06/15/2025-03:39:07] [I]        2.25       0.0093       0.0082       0.1   __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_216
+[06/15/2025-03:39:07] [I]        3.59       0.0148       0.0086       0.1   model2_/model/decoder/decoder/layers_2/cross_attn/attention_weights/MatMul+model2_/model/decoder/decoder/layers_2/cross_attn/sampling_offsets/MatMul_myl351_217
+[06/15/2025-03:39:07] [I]        2.64       0.0109       0.0099       0.1   __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_219
+[06/15/2025-03:39:07] [I]        4.15       0.0171       0.0102       0.1   model1_/model/decoder/decoder/layers_2/cross_attn/attention_weights/MatMul+model1_/model/decoder/decoder/layers_2/cross_attn/sampling_offsets/MatMul_myl351_220
+[06/15/2025-03:39:07] [I]       12.94       0.0533       0.0163       0.4   __myl_ResMaxSubExpSum_myl351_223
+[06/15/2025-03:39:07] [I]       27.46       0.1130       0.0596       0.8   __myl_ResMulMulMulAddMulAddTraResSliCasRevAddMulAddMulFloCasSubSubAddMaxMinGatLteLteAndCasSliSliEtc_myl351_225
+[06/15/2025-03:39:07] [I]        4.97       0.0204       0.0141       0.2   __myl_DivMulTraResConMulSum_myl351_227
+[06/15/2025-03:39:07] [I]       12.04       0.0495       0.0520       0.4   __myl_ResMaxSubExpSum_myl351_229
+[06/15/2025-03:39:07] [I]       15.68       0.0645       0.0601       0.5   __myl_ResMulMulMulAddMulAddTraResSliCasRevAddMulAddMulFloCasSubSubAddMaxMinGatLteLteAndCasSliSliEtc_myl351_231
+[06/15/2025-03:39:07] [I]        6.30       0.0259       0.0163       0.2   __myl_DivMulTraResConMulSum_myl351_233
+[06/15/2025-03:39:07] [I]        3.78       0.0156       0.0087       0.1   __myl_TraCon_myl351_234
+[06/15/2025-03:39:07] [I]        6.70       0.0276       0.0152       0.2   __myl_FcNegExpAddDiv_myl351_235
+[06/15/2025-03:39:07] [I]        6.68       0.0275       0.0084       0.2   __myl_SliMulSliMulAddCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_236
+[06/15/2025-03:39:07] [I]        3.60       0.0148       0.0122       0.1   model2_/model/decoder/decoder/layers_2/linear1/MatMul_myl351_237
+[06/15/2025-03:39:07] [I]        4.73       0.0195       0.0184       0.1   model2_/model/decoder/decoder/layers_2/linear2/MatMul_myl351_238
+[06/15/2025-03:39:07] [I]        2.36       0.0097       0.0090       0.1   __myl_AddMaxMinCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_239
+[06/15/2025-03:39:07] [I]        3.21       0.0132       0.0123       0.1   __myl_TraCon_myl351_241
+[06/15/2025-03:39:07] [I]        6.14       0.0252       0.0184       0.2   __myl_FcNegExpAddDiv_myl351_242
+[06/15/2025-03:39:07] [I]        2.43       0.0100       0.0102       0.1   __myl_SliMulSliMulAddCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_243
+[06/15/2025-03:39:07] [I]        4.79       0.0197       0.0158       0.1   model1_/model/decoder/decoder/layers_2/linear1/MatMul_myl351_244
+[06/15/2025-03:39:07] [I]       13.17       0.0542       0.0225       0.4   model1_/model/decoder/decoder/layers_2/linear2/MatMul_myl351_245
+[06/15/2025-03:39:07] [I]        3.33       0.0137       0.0091       0.1   __myl_AddMaxMinCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_246
+[06/15/2025-03:39:07] [I]        7.49       0.0308       0.0158       0.2   model2_/model/decoder/decoder/layers_3/self_attn/MatMul_2_myl351_249
+[06/15/2025-03:39:07] [I]        8.36       0.0344       0.0165       0.3   model1_/model/decoder/decoder/layers_3/self_attn/MatMul_2_myl351_252
+[06/15/2025-03:39:07] [I]        4.39       0.0181       0.0128       0.1   model2_/model/decoder/decoder/dec_bbox_head_2/layers_0/MatMul_myl351_254
+[06/15/2025-03:39:07] [I]        3.64       0.0150       0.0102       0.1   model2_/model/decoder/decoder/dec_bbox_head_2/layers_1/MatMul_myl351_255
+[06/15/2025-03:39:07] [I]        4.34       0.0179       0.0107       0.1   model2_/model/decoder/decoder/dec_bbox_head_2/layers_2/MatMul_myl351_256
+[06/15/2025-03:39:07] [I]        3.10       0.0128       0.0082       0.1   __myl_AddResMaxSubExpSumDivMul_myl351_257
+[06/15/2025-03:39:07] [I]        4.66       0.0192       0.0102       0.1   model2_/model/decoder/decoder/integral_2/MatMul_myl351_258
+[06/15/2025-03:39:07] [I]        8.79       0.0362       0.0148       0.3   model1_/model/decoder/decoder/dec_bbox_head_2/layers_0/MatMul_myl351_259
+[06/15/2025-03:39:07] [I]        3.54       0.0146       0.0113       0.1   model1_/model/decoder/decoder/dec_bbox_head_2/layers_1/MatMul_myl351_260
+[06/15/2025-03:39:07] [I]        4.96       0.0204       0.0143       0.2   model1_/model/decoder/decoder/dec_bbox_head_2/layers_2/MatMul_myl351_261
+[06/15/2025-03:39:07] [I]        2.68       0.0110       0.0102       0.1   __myl_AddResMaxSubExpSumDivMul_myl351_262
+[06/15/2025-03:39:07] [I]        7.16       0.0295       0.0083       0.2   model1_/model/decoder/decoder/integral_2/MatMul_myl351_263
+[06/15/2025-03:39:07] [I]        4.41       0.0181       0.0096       0.1   __myl_SliResSliResSliResSliResAddMulAddResAddMulAddResAddMulSubResAddMulSubResConSliResSliResSliEtc_myl351_264
+[06/15/2025-03:39:07] [I]        5.00       0.0206       0.0098       0.2   model2_/model/decoder/decoder/query_pos_head/layers_0_3/MatMul_myl351_265
+[06/15/2025-03:39:07] [I]        5.59       0.0230       0.0083       0.2   __myl_Rel_myl351_266
+[06/15/2025-03:39:07] [I]        5.78       0.0238       0.0143       0.2   model2_/model/decoder/decoder/query_pos_head/layers_1_3/MatMul_myl351_267
+[06/15/2025-03:39:07] [I]        2.71       0.0112       0.0077       0.1   __myl_MaxMinAdd_myl351_268
+[06/15/2025-03:39:07] [I]        2.23       0.0092       0.0082       0.1   __myl_SliResSliResSliResSliResAddMulAddResAddMulAddResAddMulSubResAddMulSubResConSliResSliResSliEtc_myl351_269
+[06/15/2025-03:39:07] [I]        3.98       0.0164       0.0108       0.1   model1_/model/decoder/decoder/query_pos_head/layers_0_3/MatMul_myl351_270
+[06/15/2025-03:39:07] [I]        3.11       0.0128       0.0084       0.1   __myl_Rel_myl351_271
+[06/15/2025-03:39:07] [I]        4.98       0.0205       0.0154       0.2   model1_/model/decoder/decoder/query_pos_head/layers_1_3/MatMul_myl351_272
+[06/15/2025-03:39:07] [I]        2.29       0.0094       0.0084       0.1   __myl_MaxMinAdd_myl351_273
+[06/15/2025-03:39:07] [I]        3.66       0.0151       0.0118       0.1   model2_/model/decoder/decoder/layers_3/self_attn/MatMul_1+model2_/model/decoder/decoder/layers_3/self_attn/MatMul_myl351_274
+[06/15/2025-03:39:07] [I]        3.96       0.0163       0.0127       0.1   model1_/model/decoder/decoder/layers_3/self_attn/MatMul_1+model1_/model/decoder/decoder/layers_3/self_attn/MatMul_myl351_275
+[06/15/2025-03:39:07] [I]        4.23       0.0174       0.0116       0.1   _gemm_mha_v2_myl351_277
+[06/15/2025-03:39:07] [I]        4.58       0.0188       0.0075       0.1   __myl_Tra_myl351_278
+[06/15/2025-03:39:07] [I]        3.47       0.0143       0.0123       0.1   _gemm_mha_v2_myl351_280
+[06/15/2025-03:39:07] [I]        2.54       0.0105       0.0082       0.1   __myl_Tra_myl351_281
+[06/15/2025-03:39:07] [I]        4.11       0.0169       0.0123       0.1   model2_/model/decoder/decoder/layers_3/self_attn/Gemm_myl351_282
+[06/15/2025-03:39:07] [I]        3.00       0.0124       0.0102       0.1   model1_/model/decoder/decoder/layers_3/self_attn/Gemm_myl351_283
+[06/15/2025-03:39:07] [I]        2.17       0.0089       0.0074       0.1   __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_284
+[06/15/2025-03:39:07] [I]        5.13       0.0211       0.0100       0.2   model2_/model/decoder/decoder/layers_3/cross_attn/attention_weights/MatMul+model2_/model/decoder/decoder/layers_3/cross_attn/sampling_offsets/MatMul_myl351_285
+[06/15/2025-03:39:07] [I]        2.74       0.0113       0.0095       0.1   __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAddAdd_myl351_287
+[06/15/2025-03:39:07] [I]        7.60       0.0313       0.0123       0.2   model1_/model/decoder/decoder/layers_3/cross_attn/attention_weights/MatMul+model1_/model/decoder/decoder/layers_3/cross_attn/sampling_offsets/MatMul_myl351_288
+[06/15/2025-03:39:07] [I]        6.25       0.0257       0.0109       0.2   __myl_ResMaxSubExpSum_myl351_291
+[06/15/2025-03:39:07] [I]       17.16       0.0706       0.0614       0.5   __myl_ResMulMulMulAddMulAddTraResSliCasRevAddMulAddMulFloCasSubSubAddMaxMinGatLteLteAndCasSliSliEtc_myl351_293
+[06/15/2025-03:39:07] [I]        5.20       0.0214       0.0146       0.2   __myl_DivMulTraResConMulSum_myl351_295
+[06/15/2025-03:39:07] [I]       13.64       0.0561       0.0545       0.4   __myl_ResMaxSubExpSum_myl351_297
+[06/15/2025-03:39:07] [I]       16.02       0.0659       0.0598       0.5   __myl_ResMulMulMulAddMulAddTraResSliCasRevAddMulAddMulFloCasSubSubAddMaxMinGatLteLteAndCasSliSliEtc_myl351_299
+[06/15/2025-03:39:07] [I]        3.64       0.0150       0.0141       0.1   __myl_DivMulTraResConMulSum_myl351_301
+[06/15/2025-03:39:07] [I]        2.80       0.0115       0.0102       0.1   __myl_TraCon_myl351_302
+[06/15/2025-03:39:07] [I]        8.41       0.0346       0.0156       0.3   __myl_FcNegExpAddDiv_myl351_303
+[06/15/2025-03:39:07] [I]        2.27       0.0093       0.0088       0.1   __myl_SliMulSliMulAddCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_304
+[06/15/2025-03:39:07] [I]        3.34       0.0137       0.0119       0.1   model2_/model/decoder/decoder/layers_3/linear1/MatMul_myl351_305
+[06/15/2025-03:39:07] [I]        7.60       0.0313       0.0201       0.2   model2_/model/decoder/decoder/layers_3/linear2/MatMul_myl351_306
+[06/15/2025-03:39:07] [I]        2.63       0.0108       0.0082       0.1   __myl_AddMaxMinCasMeaSubMulMeaAddSqrDivMulCasMulAddAddRes_myl351_307
+[06/15/2025-03:39:07] [I]        3.23       0.0133       0.0109       0.1   model2_/model/decoder/decoder/dec_bbox_head_3/layers_0/MatMul_myl351_309
+[06/15/2025-03:39:07] [I]        2.69       0.0111       0.0085       0.1   model2_/model/decoder/decoder/dec_bbox_head_3/layers_1/MatMul_myl351_310
+[06/15/2025-03:39:07] [I]        6.35       0.0261       0.0094       0.2   model2_/model/decoder/decoder/dec_bbox_head_3/layers_2/MatMul_myl351_311
+[06/15/2025-03:39:07] [I]        2.54       0.0105       0.0088       0.1   __myl_AddResMaxSubExpSumDivMulCas_myl351_312
+[06/15/2025-03:39:07] [I]       10.67       0.0439       0.0271       0.3   __myl_Top_myl351_313
+[06/15/2025-03:39:07] [I]        2.42       0.0100       0.0088       0.1   __myl_TraCon_myl351_314
+[06/15/2025-03:39:07] [I]        7.31       0.0301       0.0155       0.2   __myl_FcNegExpAddDiv_myl351_315
+[06/15/2025-03:39:07] [I]        1.85       0.0076       0.0067       0.1   __myl_SliMulSliMulAddCasMeaSubMulMeaAddSqrDivMulCasMulAdd_myl351_316
+[06/15/2025-03:39:07] [I]        5.91       0.0243       0.0129       0.2   model1_/model/decoder/decoder/layers_3/linear1/MatMul_myl351_317
+[06/15/2025-03:39:07] [I]        5.25       0.0216       0.0172       0.2   model1_/model/decoder/decoder/layers_3/linear2/MatMul_myl351_318
+[06/15/2025-03:39:07] [I]        7.02       0.0289       0.0074       0.2   __myl_AddMaxMinCasMeaSubMulMeaAddSqrDivMulCasMulAddAddRes_myl351_319
+[06/15/2025-03:39:07] [I]        3.08       0.0127       0.0104       0.1   model1_/model/decoder/decoder/dec_bbox_head_3/layers_0/MatMul_myl351_321
+[06/15/2025-03:39:07] [I]        5.55       0.0229       0.0079       0.2   model1_/model/decoder/decoder/dec_bbox_head_3/layers_1/MatMul_myl351_322
+[06/15/2025-03:39:07] [I]        3.62       0.0149       0.0079       0.1   model1_/model/decoder/decoder/dec_bbox_head_3/layers_2/MatMul_myl351_323
+[06/15/2025-03:39:07] [I]        3.88       0.0160       0.0051       0.1   __myl_AddResMaxSubExpSumDivMulCas_myl351_324
+[06/15/2025-03:39:07] [I]        8.99       0.0370       0.0257       0.3   __myl_Top_myl351_325
+[06/15/2025-03:39:07] [I]        4.97       0.0205       0.0100       0.2   __myl_Cas_myl351_327
+[06/15/2025-03:39:07] [I]        2.26       0.0093       0.0097       0.1   __myl_Cas_myl351_329
+[06/15/2025-03:39:07] [I]        4.34       0.0179       0.0092       0.1   __myl_Cas_myl351_330
+[06/15/2025-03:39:07] [I]        1.36       0.0056       0.0041       0.0   __myl_Cas_myl351_331
+[06/15/2025-03:39:07] [I]        1.96       0.0080       0.0046       0.1   model2_/model/decoder/decoder/lqe_layers.3/ReduceMean
+[06/15/2025-03:39:07] [I]        3.89       0.0160       0.0042       0.1   model1_/model/decoder/decoder/lqe_layers.3/ReduceMean
+[06/15/2025-03:39:07] [I]        0.83       0.0034       0.0020       0.0   dummy_shape_call__mye71501_0_myl354_0
+[06/15/2025-03:39:07] [I]        1.52       0.0062       0.0047       0.0   __myl_CasResMaxSubExpSumDivMul_myl354_1
+[06/15/2025-03:39:07] [I]        2.56       0.0105       0.0047       0.1   model2_/model/decoder/decoder/integral_3/MatMul_myl354_2
+[06/15/2025-03:39:07] [I]        1.33       0.0055       0.0042       0.0   __myl_CasResMaxSubExpSumDivMul_myl354_3
+[06/15/2025-03:39:07] [I]        1.47       0.0061       0.0043       0.0   model1_/model/decoder/decoder/integral_3/MatMul_myl354_4
+[06/15/2025-03:39:07] [I]        1.56       0.0064       0.0039       0.0   __myl_CasCasCon_myl354_5
+[06/15/2025-03:39:07] [I]        1.56       0.0064       0.0037       0.0   __myl_CasCasCon_myl354_6
+[06/15/2025-03:39:07] [I]        2.19       0.0090       0.0058       0.1   model2_/model/decoder/decoder/lqe_layers_3/reg_conf/layers_0/MatMul_myl354_7
+[06/15/2025-03:39:07] [I]        1.24       0.0051       0.0041       0.0   __myl_RelMulSum_myl354_8
+[06/15/2025-03:39:07] [I]        1.25       0.0052       0.0043       0.0   __myl_Cas_myl354_9
+[06/15/2025-03:39:07] [I]        2.78       0.0114       0.0082       0.1   model2_/model/decoder/decoder/dec_score_head_3/MatMul_myl354_10
+[06/15/2025-03:39:07] [I]        3.69       0.0152       0.0039       0.1   __myl_AddAddResGatNegExpAddDivRes_myl354_11
+[06/15/2025-03:39:07] [I]        6.45       0.0265       0.0123       0.2   __myl_Top_myl354_12
+[06/15/2025-03:39:07] [I]        1.14       0.0047       0.0038       0.0   __myl_Mov_myl354_13
+[06/15/2025-03:39:07] [I]        2.44       0.0100       0.0048       0.1   __myl_SliResSliResSliResSliResAddCasMulCasAddResAddCasMulCasAddResAddMulSubResAddMulSubResConSliEtc_myl354_14
+[06/15/2025-03:39:07] [I]        2.10       0.0086       0.0059       0.1   model1_/model/decoder/decoder/lqe_layers_3/reg_conf/layers_0/MatMul_myl354_15
+[06/15/2025-03:39:07] [I]        1.55       0.0064       0.0040       0.0   __myl_RelMulSum_myl354_16
+[06/15/2025-03:39:07] [I]        1.25       0.0051       0.0041       0.0   __myl_Cas_myl354_17
+[06/15/2025-03:39:07] [I]        2.71       0.0112       0.0079       0.1   model1_/model/decoder/decoder/dec_score_head_3/MatMul_myl354_18
+[06/15/2025-03:39:07] [I]        1.66       0.0068       0.0039       0.1   __myl_AddAddResGatNegExpAddDivRes_myl354_19
+[06/15/2025-03:39:07] [I]        3.88       0.0160       0.0120       0.1   __myl_Top_myl354_20
+[06/15/2025-03:39:07] [I]        1.34       0.0055       0.0037       0.0   __myl_Mov_myl354_21
+[06/15/2025-03:39:07] [I]        1.90       0.0078       0.0049       0.1   __myl_SliResSliResSliResSliResAddCasMulCasAddResAddCasMulCasAddResAddMulSubResAddMulSubResConSliEtc_myl354_22
+[06/15/2025-03:39:07] [I]        2.02       0.0083       0.0041       0.1   Reformatting CopyNode for Output Tensor 1 to {ForeignNode[model1_/postprocessor/Constant_16_output_0...concat_scores]}
+[06/15/2025-03:39:07] [I]        4.04       0.0166       0.0038       0.1   Reformatting CopyNode for Output Tensor 2 to {ForeignNode[model1_/postprocessor/Constant_16_output_0...concat_scores]}
+[06/15/2025-03:39:07] [I]     3240.48      13.3353      11.9768     100.0   Total
+[06/15/2025-03:39:07] [I] 
+&&&& PASSED TensorRT.trtexec [TensorRT v100700] [b23] # trtexec --loadEngine=fused_model.engine --separateProfileRun --dumpProfile
