@@ -435,44 +435,7 @@ class DFINECriterion(nn.Module):
 
         # For debugging Objects365 pre-train.
         losses = {k: torch.nan_to_num(v, nan=0.0, posinf=1e6, neginf=-1e6) for k, v in losses.items()}
-        # ----- DDP SAFE LOSS DICT PATCH -----
-        device = outputs["pred_logits"].device
-
-        # Collect all possible base loss types from the logs
-        base_loss_types = ["loss_bbox", "loss_giou", "loss_vfl", "loss_fgl", "loss_ddf", "loss_focal"]
-        all_expected_keys = set(losses.keys())
-
-        # Handle DN losses
-        if "dn_outputs" in outputs:
-            dn_num = len(outputs["dn_outputs"])
-            for i in range(dn_num):
-                for base in base_loss_types:
-                    all_expected_keys.add(f"{base}_dn_{i}")
-            # DN pre-head
-            for base in base_loss_types:
-                all_expected_keys.add(f"{base}_dn_pre")
-
-        # Handle aux losses - based on logs, you have aux_0, aux_1, aux_2
-        aux_num = 3  # Based on your logs
-        for i in range(aux_num):
-            for base in base_loss_types:
-                all_expected_keys.add(f"{base}_aux_{i}")
-
-        # Handle pre losses
-        for base in base_loss_types:
-            all_expected_keys.add(f"{base}_pre")
-
-        # Handle enc losses - based on logs, you have enc_0
-        enc_num = 1  # Based on your logs
-        for i in range(enc_num):
-            for base in base_loss_types:
-                all_expected_keys.add(f"{base}_enc_{i}")
-
-        # Fill missing keys with zeros
-        for key in all_expected_keys:
-            if key not in losses:
-                losses[key] = torch.tensor(0.0, device=device, requires_grad=True)
-                
+        
         return losses
 
     def get_loss_meta_info(self, loss, outputs, targets, indices):
